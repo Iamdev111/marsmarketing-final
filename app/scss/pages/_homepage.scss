@@ -1,0 +1,286 @@
+.h-sub-title {
+    background: $gray;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 5px 25px;
+    display: inline-block;
+    border-radius: 20px;
+    margin-bottom: 20px;
+
+    i {
+        color: $brand;
+    }
+}
+
+.heading {
+    font-weight: 700;
+    font-size: 40px;
+    text-transform: uppercase;
+    font-family: Barlow Condensed, sans-serif;
+    margin-bottom: 20px;
+
+    &-center {
+        text-align: center;
+    }
+}
+
+.sub-heading {
+    font-size: 20px;
+}
+
+.block-feedback {
+    background: $dark;
+    padding: 50px 0 20px;
+
+    .heading {
+        color: $light;
+    }
+
+    .sub-heading {
+        max-width: 70%;
+        text-align: center;
+        margin: 0 auto;
+        color: $light;
+        margin-bottom: 40px;
+    }
+
+    .inner {
+        background: $light;
+        border-radius: 8px;
+        padding: 20px;
+        font-size: 18px;
+        font-weight: 500;
+        margin-bottom: 30px;
+
+        i {
+            color: $brand;
+            font-size: 22px;
+        }
+    }
+}
+
+.meta-people {
+    display: flex;
+
+    .avatar {
+        width: 50px;
+        height: 50px;
+        border-radius: 50px;
+        margin-right: 10px;
+    }
+
+    .name {
+        font-weight: 700;
+    }
+
+    .job-title {
+        font-size: 14px;
+    }
+}
+
+.block-faq {
+    padding: 50px 0;
+
+    .sub-heading {
+        margin-bottom: 30px;
+    }
+
+    .item-faq {
+        padding: 20px;
+        position: relative;
+
+        &:not(:first-child) {
+            border-top: 1px solid $gray;
+        }
+
+        &.active {
+            background: $gray;
+            border-radius: 8px;
+            border-bottom: 0;
+
+            .extend {
+                &::after {
+                    content: "\f056";
+                }
+            }
+
+            .faq-name {
+                margin-bottom: 15px;
+            }
+
+            &+.item-faq {
+                border-top: 0;
+            }
+        }
+    }
+
+    .faq-name {
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    .extend {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+
+        &::after {
+            content: "\f055";
+            font-family: Font Awesome\ 5 Pro;
+            font-size: 20px;
+            cursor: pointer;
+        }
+    }
+
+    .faq-content {
+        display: none;
+    }
+}
+
+.block-expert {
+    .list-image-experts {
+        .item {
+            position: relative;
+
+            &::before {
+                content: "";
+                width: 400px;
+                height: 400px;
+                background: url(../images/logo/logo-r.png) no-repeat;
+                background-size: 100% 100%;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                z-index: -1;
+                opacity: 0.05;
+            }
+        }
+    }
+
+    .apostrophe {
+        font-size: 40px;
+        color: $brand;
+    }
+
+    .meta-people {
+        margin-top: 20px;
+    }
+
+    .slick-prev,
+    .slick-next {
+        transform: none;
+    }
+
+    .slick-prev {
+        top: 100%;
+        left: 80%;
+    }
+
+    .slick-next {
+        top: 100%;
+        right: 5%;
+    }
+}
+
+.block-form {
+    padding: 50px;
+    background: $gray;
+
+    .wrap-left {
+        background: $dark;
+        height: 100%;
+        padding: 50px 50px 50px 70px;
+        color: $light;
+        border-bottom-right-radius: 60px;
+
+        .logo {
+            width: 100px;
+            height: 114px;
+            margin-bottom: 25px;
+        }
+
+        a {
+            color: $light;
+        }
+    }
+
+    .slogan {
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+
+    .sub-slogan {
+        margin-bottom: 15px;
+    }
+
+    .info {
+        list-style: none;
+        padding-left: 0;
+        margin-bottom: 0;
+    }
+
+    .item {
+
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+
+        i {
+            width: 20px;
+            margin-right: 5px;
+        }
+
+        span {
+            font-weight: 700;
+        }
+    }
+
+    .title-form {
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 15px;
+        text-transform: uppercase;
+    }
+
+    label {
+        font-weight: 700;
+        font-size: 15px;
+    }
+
+    ::placeholder {
+        font-size: 15px;
+    }
+
+    .note {
+        font-size: 14px;
+        font-style: italic;
+    }
+}
+
+.block-why-choose {
+    margin: 50px 0;
+
+    .list-content {
+        list-style: none;
+        padding-left: 0;
+        margin-bottom: 0;
+
+        .item {
+            display: flex;
+
+            &:not(:last-child) {
+                margin-bottom: 15px;
+            }
+        }
+
+        .icon {
+            width: 60px;
+            height: 60px;
+            flex: none;
+            margin-right: 15px;
+        }
+    }
+
+}

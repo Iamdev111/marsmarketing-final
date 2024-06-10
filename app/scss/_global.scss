@@ -1,0 +1,78 @@
+body {
+    font-family: "Sarabun", sans-serif;
+    font-style: normal;
+    font-size: 16px;
+    font-weight: 400;
+    word-break: break-word;
+    color: $text;
+}
+
+a {
+    &:hover {
+        text-decoration: none;
+        color: $brand;
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+button:focus {
+    outline: none;
+}
+
+.form-control:focus {
+    box-shadow: none;
+    border-color: #919191;
+}
+
+.thumbnail {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+
+    img {
+        -o-object-fit: cover;
+        object-fit: cover;
+        object-position: 50% 50%;
+        -o-object-position: 50% 50%;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.slick-arrow {
+    z-index: 1;
+    width: 40px;
+    height: 40px;
+    box-shadow: 0 3px 15px rgba(147, 79, 33, .15);
+    background: $light;
+    border-radius: 40px;
+
+    &::before {
+        font-family: "Font Awesome 5 Pro";
+        color: $brand;
+        opacity: 1;
+    }
+
+    &:hover {
+        background: $light;
+    }
+}
+
+.slick-next {
+    &::before {
+        content: "\f105";
+    }
+}
+
+.slick-prev {
+    &::before {
+        content: "\f104";
+    }
+}

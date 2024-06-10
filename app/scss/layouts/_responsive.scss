@@ -1,0 +1,21 @@
+@media (min-width:768px) {
+
+    /* --- Menu --- */
+    .primary-nav .main-menu {
+        flex-direction: row;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* --- End Menu --- */
+}
+
+@media (max-width:575px) {
+
+    /* --- Menu --- */
+    .toggle-menu {
+        display: block;
+    }
+
+    /* --- End Menu --- */
+}
