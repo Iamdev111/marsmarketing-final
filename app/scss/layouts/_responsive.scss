@@ -1,10 +1,27 @@
+@media (min-width:1920px) {
+    .block-banner {
+        .container-banner {
+            padding-left: 120px;
+            padding-right: 120px;
+        }
+    }
+}
+
 @media (min-width:768px) {
 
     /* --- Menu --- */
-    .primary-nav .main-menu {
-        flex-direction: row;
-        margin-left: auto;
-        margin-right: auto;
+    .primary-nav {
+        .main-menu {
+            flex-direction: row;
+
+            &-left {
+                margin-right: auto;
+            }
+
+            &-right {
+                margin-left: auto;
+            }
+        }
     }
 
     /* --- End Menu --- */
