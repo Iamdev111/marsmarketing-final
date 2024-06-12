@@ -48,7 +48,7 @@ button:focus {
   z-index: 1;
   width: 40px;
   height: 40px;
-  box-shadow: 0 3px 15px rgba(147, 79, 33, 0.15);
+  box-shadow: 0 3px 15px rgba(203, 139, 137, 0.1);
   background: #fff;
   border-radius: 40px;
 }
@@ -199,16 +199,6 @@ button:focus {
   bottom: 10px;
 }
 
-.header .main-menu a {
-  color: #222;
-  display: block;
-  line-height: 1.2;
-}
-
-.header .main-menu a:hover {
-  color: #c22026;
-}
-
 .header .main-menu > li {
   position: relative;
 }
@@ -218,6 +208,7 @@ button:focus {
   font-size: 18px;
   font-weight: 600;
   color: #222;
+  text-transform: uppercase;
   position: relative;
 }
 
@@ -238,6 +229,15 @@ button:focus {
 }
 
 .header .main-menu > li:hover > a::before {
+  left: 20px;
+  width: calc(100% - 40px);
+}
+
+.header .main-menu > li.active > a {
+  color: #c22026;
+}
+
+.header .main-menu > li.active > a::before {
   left: 20px;
   width: calc(100% - 40px);
 }
@@ -267,7 +267,7 @@ button:focus {
 }
 
 .header .primary-nav {
-  padding: 5px 0;
+  padding: 5px 0 10px;
   position: relative;
 }
 
@@ -277,10 +277,33 @@ button:focus {
 }
 
 .logo-header {
-  width: 80px;
-  height: 90px;
-  background: url(../images/logo/logo-r.png) no-repeat;
-  background-size: cover;
+  width: 70px;
+  height: 80px;
+  background: url(../images/logo/logo.svg) no-repeat;
+  background-size: 100%;
+  transition: all 0.3s;
+}
+
+.brand-logo {
+  margin-bottom: 0;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  z-index: 9;
+}
+
+.fixed-header {
+  box-shadow: 0 2px 16px 0 rgba(0, 41, 87, 0.1);
+}
+
+.fixed-header .logo-header {
+  width: 50px;
+  height: 57px;
 }
 
 .footer {
@@ -328,6 +351,7 @@ button:focus {
   border-radius: 20px;
   margin-bottom: 20px;
   font-family: "Barlow Condensed", sans-serif;
+  color: #222;
 }
 
 .h-sub-title i {
@@ -348,6 +372,10 @@ button:focus {
 
 .sub-heading {
   font-size: 20px;
+}
+
+.main-page {
+  margin-top: 90px;
 }
 
 .block-feedback {
@@ -401,7 +429,7 @@ button:focus {
 }
 
 .block-faq {
-  padding: 50px 0;
+  margin: 50px 0;
 }
 
 .block-faq .sub-heading {
@@ -479,6 +507,10 @@ button:focus {
   opacity: 0.05;
 }
 
+.block-expert .list-image-experts .item img {
+  margin: 0 auto;
+}
+
 .block-expert .apostrophe {
   font-size: 40px;
   color: #c22026;
@@ -500,11 +532,11 @@ button:focus {
 
 .block-expert .slick-next {
   top: 100%;
-  right: 5%;
+  right: 6%;
 }
 
 .block-form {
-  padding: 50px;
+  padding: 50px 0;
   background: #f0efeb;
 }
 
@@ -578,7 +610,11 @@ button:focus {
 }
 
 .block-why-choose {
-  margin: 50px 0;
+  margin-top: 50px;
+}
+
+.block-why-choose .heading {
+  margin-bottom: 40px;
 }
 
 .block-why-choose .list-content {
@@ -588,7 +624,8 @@ button:focus {
 }
 
 .block-why-choose .list-content .item {
-  display: flex;
+  position: relative;
+  padding-left: 95px;
 }
 
 .block-why-choose .list-content .item:not(:last-child) {
@@ -596,10 +633,27 @@ button:focus {
 }
 
 .block-why-choose .list-content .icon {
-  width: 60px;
-  height: 60px;
-  flex: none;
-  margin-right: 15px;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  left: 30px;
+  top: 20px;
+}
+
+.block-why-choose .title {
+  font-size: 22px;
+  font-weight: 600;
+  font-family: Barlow Condensed, sans-serif;
+}
+
+.block-why-choose .item {
+  background: #fff2f2;
+  padding: 15px 30px;
+  border-radius: 8px;
+}
+
+.block-why-choose .item .text {
+  margin-bottom: 0;
 }
 
 .block-banner {
@@ -713,6 +767,150 @@ button:focus {
 .block-banner .banner-logo-item .img-logo {
   width: 45px;
   margin-right: 10px;
+}
+
+.block-about {
+  margin-top: 50px;
+}
+
+.block-about .core-title {
+  font-weight: 700;
+  font-family: Barlow Condensed, sans-serif;
+  text-transform: uppercase;
+  font-size: 28px;
+  color: #222;
+}
+
+.block-about .core-item {
+  align-items: center;
+  padding: 20px 0;
+}
+
+.block-about .core-item .text-content {
+  background: #fff;
+  box-shadow: 0 3px 15px rgba(203, 139, 137, 0.1);
+  padding: 30px 50px;
+  border-radius: 8px;
+  position: relative;
+  z-index: 2;
+}
+
+.block-about .core-item .order-md-1.order-2 .text-content {
+  margin-right: -70px;
+}
+
+.block-about .core-item .order-md-2.order-2 .text-content {
+  margin-left: -70px;
+}
+
+.block-course {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.block-course-left .course .thumbnail {
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.block-course-left .course-title {
+  font-size: 24px;
+  font-weight: 600;
+  font-family: Barlow Condensed, sans-serif;
+  margin-bottom: 0;
+}
+
+.block-course-left .course-meta .meta {
+  list-style: none;
+  margin-bottom: 0;
+  padding-left: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.block-course-left .course-meta .item {
+  position: relative;
+  padding-left: 25px;
+}
+
+.block-course-left .course-meta .item::before {
+  font-family: Font Awesome\ 5 Pro;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.block-course-left .course-meta .item:nth-child(1)::before {
+  content: "\f5ff";
+  color: #6400ff;
+}
+
+.block-course-left .course-meta .item:nth-child(2)::before {
+  content: "\f573";
+  color: #ff0000;
+}
+
+.block-course-left .course-meta .item:nth-child(3)::before {
+  content: "\f017";
+  color: #fb6f30;
+}
+
+.block-course-left .course-meta .text {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.block-course .price-review {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #ededed;
+}
+
+.block-course .review {
+  display: flex;
+  align-items: center;
+}
+
+.block-course .review-star {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+  margin-right: 15px;
+}
+
+.block-course .review-star li {
+  display: inline-block;
+  color: #fb6f30;
+}
+
+.block-course .review .number {
+  font-size: 14px;
+  font-weight: 500;
+  color: #a5a5a5;
+}
+
+.block-course .price {
+  font-size: 22px;
+  font-weight: 600;
+  color: #d0021c;
+  font-family: Barlow Condensed, sans-serif;
+}
+
+.block-course .heading {
+  margin-bottom: 40px;
+}
+
+@media (min-width: 1400px) {
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl {
+    max-width: 1400px;
+  }
 }
 
 @media (min-width: 1920px) {

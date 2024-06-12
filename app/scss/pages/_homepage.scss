@@ -7,6 +7,7 @@
     border-radius: 20px;
     margin-bottom: 20px;
     font-family: "Barlow Condensed", sans-serif;
+    color: $dark;
 
     i {
         color: $brand;
@@ -27,6 +28,10 @@
 
 .sub-heading {
     font-size: 20px;
+}
+
+.main-page {
+    margin-top: 90px;
 }
 
 .block-feedback {
@@ -80,7 +85,7 @@
 }
 
 .block-faq {
-    padding: 50px 0;
+    margin: 50px 0;
 
     .sub-heading {
         margin-bottom: 30px;
@@ -158,6 +163,10 @@
                 z-index: -1;
                 opacity: 0.05;
             }
+
+            img {
+                margin: 0 auto;
+            }
         }
     }
 
@@ -182,12 +191,12 @@
 
     .slick-next {
         top: 100%;
-        right: 5%;
+        right: 6%;
     }
 }
 
 .block-form {
-    padding: 50px;
+    padding: 50px 0;
     background: $gray;
 
     .wrap-left {
@@ -264,7 +273,11 @@
 }
 
 .block-why-choose {
-    margin: 50px 0;
+    margin-top: 50px;
+
+    .heading {
+        margin-bottom: 40px;
+    }
 
     .list-content {
         list-style: none;
@@ -272,7 +285,8 @@
         margin-bottom: 0;
 
         .item {
-            display: flex;
+            position: relative;
+            padding-left: 95px;
 
             &:not(:last-child) {
                 margin-bottom: 15px;
@@ -280,10 +294,27 @@
         }
 
         .icon {
-            width: 60px;
-            height: 60px;
-            flex: none;
-            margin-right: 15px;
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            left: 30px;
+            top: 20px;
+        }
+    }
+
+    .title {
+        font-size: 22px;
+        font-weight: 600;
+        font-family: Barlow Condensed, sans-serif;
+    }
+
+    .item {
+        background: #fff2f2;
+        padding: 15px 30px;
+        border-radius: 8px;
+
+        .text {
+            margin-bottom: 0;
         }
     }
 }
@@ -398,5 +429,157 @@
             width: 45px;
             margin-right: 10px;
         }
+    }
+}
+
+.block-about {
+    margin-top: 50px;
+
+    .core-title {
+        font-weight: 700;
+        font-family: Barlow Condensed, sans-serif;
+        text-transform: uppercase;
+        font-size: 28px;
+        color: $dark;
+    }
+
+    .core-item {
+        align-items: center;
+        padding: 20px 0;
+
+        .text-content {
+            background: $light;
+            box-shadow: 0 3px 15px rgba(203, 139, 137, 0.1);
+            padding: 30px 50px;
+            border-radius: 8px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .order-md-1.order-2 {
+            .text-content {
+                margin-right: -70px;
+            }
+        }
+
+        .order-md-2.order-2 {
+            .text-content {
+                margin-left: -70px;
+            }
+        }
+
+    }
+}
+
+.block-course {
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+    &-left {
+        .course {
+
+            .thumbnail {
+                border-radius: 10px;
+                margin-bottom: 15px;
+            }
+
+            &-title {
+                font-size: 24px;
+                font-weight: 600;
+                font-family: Barlow Condensed, sans-serif;
+                margin-bottom: 0;
+            }
+
+            &-meta {
+                .meta {
+                    list-style: none;
+                    margin-bottom: 0;
+                    padding-left: 0;
+                    display: flex;
+                    justify-content: space-between;
+                }
+
+                .item {
+                    position: relative;
+                    padding-left: 25px;
+
+                    &::before {
+                        font-family: Font Awesome\ 5 Pro;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                    }
+
+                    &:nth-child(1) {
+                        &::before {
+                            content: "\f5ff";
+                            color: #6400ff;
+                        }
+                    }
+
+                    &:nth-child(2) {
+                        &::before {
+                            content: "\f573";
+                            color: #ff0000;
+                        }
+                    }
+
+                    &:nth-child(3) {
+                        &::before {
+                            content: "\f017";
+                            color: #fb6f30;
+                        }
+                    }
+                }
+
+                .text {
+                    font-size: 14px;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+
+    .price-review {
+        margin-top: 15px;
+        margin-bottom: 15px;
+        padding-bottom: 15px;
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid #ededed;
+    }
+
+    .review {
+        display: flex;
+        align-items: center;
+
+        &-star {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 0;
+            margin-right: 15px;
+
+            li {
+                display: inline-block;
+                color: #fb6f30;
+            }
+        }
+
+        .number {
+            font-size: 14px;
+            font-weight: 500;
+            color: #a5a5a5;
+        }
+    }
+
+    .price {
+        font-size: 22px;
+        font-weight: 600;
+        color: #d0021c;
+        font-family: Barlow Condensed, sans-serif;
+    }
+
+    .heading {
+        margin-bottom: 40px;
     }
 }

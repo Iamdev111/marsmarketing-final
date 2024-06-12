@@ -36,15 +36,6 @@
     }
 
     .main-menu {
-        a {
-            color: $dark;
-            display: block;
-            line-height: 1.2;
-
-            &:hover {
-                color: $brand;
-            }
-        }
 
         &>li {
             position: relative;
@@ -54,6 +45,7 @@
                 font-size: 18px;
                 font-weight: 600;
                 color: $dark;
+                text-transform: uppercase;
                 position: relative;
 
                 &::before {
@@ -71,6 +63,17 @@
 
             &:hover {
 
+                &>a {
+                    color: $brand;
+
+                    &::before {
+                        left: 20px;
+                        width: calc(100% - 40px);
+                    }
+                }
+            }
+
+            &.active {
                 &>a {
                     color: $brand;
 

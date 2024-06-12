@@ -26,34 +26,34 @@
             <div class="container d-flex align-items-center">
                 <button class="toggle-menu"><span></span></button>
                 <ul class="main-menu navbar-nav main-menu-left">
-                    <li class="">
-                        <a href="#" class="">Trang chủ</a>
+                    <li class="menu-item">
+                        <a href="/" class="menu-link">Trang chủ</a>
                     </li>
-                    <li class="">
-                        <a href="#" class="">Giới thiệu</a>
+                    <li class="menu-item">
+                        <a href="home-about" class="scrollTo menu-link">Giới thiệu</a>
                     </li>
-                    <li class="">
-                        <a href="#" class="">Lịch khai giảng</a>
+                    <li class="menu-item">
+                        <a href="" class="scrollTo menu-link">Lịch khai giảng</a>
                     </li>
-                    <li class="">
-                        <a href="#" class="">Học viên</a>
+                    <li class="menu-item">
+                        <a href="home-feedback" class="scrollTo menu-link">Học viên</a>
                     </li>
                 </ul>
                 <h1 class="brand-logo">
-                    <a href="#" class="logo-site logo-header">MarsMarketing</a>
+                    <a href="" class="logo-site logo-header">MarsMarketing</a>
                 </h1>
                 <ul class="main-menu navbar-nav main-menu-right">
-                    <li class="">
-                        <a href="#" class="">Đội ngũ chuyên gia</a>
+                    <li class="menu-item">
+                        <a href="home-expert" class="scrollTo menu-link">Đội ngũ chuyên gia</a>
                     </li>
-                    <li class="">
-                        <a href="#" class="">Câu hỏi</a>
+                    <li class="menu-item">
+                        <a href="home-faq" class="scrollTo menu-link">Câu hỏi</a>
                     </li>
-                    <li class="">
-                        <a href="#" class="">Ưu điểm</a>
+                    <li class="menu-item">
+                        <a href="home-choose" class="scrollTo menu-link">Ưu điểm</a>
                     </li>
-                    <li class="">
-                        <a href="#" class="">Liên hệ</a>
+                    <li class="menu-item">
+                        <a href="home-form" class="scrollTo menu-link">Liên hệ</a>
                     </li>
                 </ul>
             </div>
@@ -118,7 +118,7 @@
                 </div>
             </div>
         </div>
-        <div class="block-about">
+        <div class="block-about" id="home-about">
             <div class="container">
                 <span class="h-sub-title">
                     <i class="fas fa-signal-alt-3"></i>
@@ -132,7 +132,7 @@
                         <div class="col-md-6 order-1 order-md-2">
                             <img src="images/thumb/tamnhin.jpg" alt="">
                         </div>
-                        <div class="col-md-6 order-2 order-md-1  ">
+                        <div class="col-md-6 order-2 order-md-1">
                             <div class="inner text-content">
                                 <h3 class="core-title">Tầm nhìn</h3>
                                 <p>
@@ -151,7 +151,7 @@
                                 <p>Cung cấp các khóa học chất lượng cao, kết hợp kiến thức chuyên sâu và công nghệ hiện
                                     đại, nhằm nâng cao hiệu quả tiếp thị và tuyển sinh cho các trung tâm giáo dục. Chúng
                                     tôi cam kết mang đến giá trị bền vững và đồng hành cùng sự phát triển lâu dài của
-                                    các đối tác</p>
+                                    các đối tác.</p>
                             </div>
                         </div>
                     </div>
@@ -159,7 +159,7 @@
                         <div class="col-md-6 order-1 order-md-2">
                             <img src="images/thumb/gtcl.jpg" alt="">
                         </div>
-                        <div class="col-md-6 order-2 order-md-1  ">
+                        <div class="col-md-6 order-2 order-md-1">
                             <div class="inner text-content">
                                 <h3 class="core-title">Giá trị cốt lõi</h3>
                                 <p>
@@ -191,7 +191,7 @@
                         <div class="col-md-6 order-1 order-md-2">
                             <img src="images/thumb/tvdn.jpg" alt="">
                         </div>
-                        <div class="col-md-6 order-2 order-md-1  ">
+                        <div class="col-md-6 order-2 order-md-1">
                             <div class="inner text-content">
                                 <h3 class="core-title">Tư vấn doanh nghiệp</h3>
                                 <p>
@@ -199,8 +199,7 @@
                                     kinh doanh thông qua các dịch vụ tư vấn chuyên nghiệp và các giải pháp thực tiễn.
                                     Đánh giá chi tiết tình hình hiện tại của doanh nghiệp, xác định điểm mạnh, điểm yếu
                                     và những cơ hội phát triển. Thiết lập các chỉ số đánh giá hiệu quả (KPI) và theo dõi
-                                    tiến trình thực hiện, từ đó điều chỉnh và cải thiện liên tục các chiến lược và hoạt
-                                    động.
+                                    tiến trình thực hiện.
                                 </p>
                             </div>
                         </div>
@@ -208,10 +207,76 @@
                 </div>
             </div>
         </div>
-        <div class="block-expert">
+        <div class="block-why-choose" id="home-choose">
             <div class="container">
+                <div class="text-center">
+                    <span class="h-sub-title">
+                        <i class="fas fa-signal-alt-3"></i>
+                        Ưu thế
+                    </span>
+                </div>
+                <h2 class="heading heading-center">
+                    Marsmaketing - lựa chọn xứng đáng
+                </h2>
                 <div class="row">
-                    <div class="col-md-5">
+                    <div class="col-md-6">
+                        <ul class="list-content">
+                            <li class="item">
+                                <span class="icon thumbnail">
+                                    <img src="images/icons/customer.png" alt="">
+                                </span>
+                                <div class="meta">
+                                    <h3 class="title">
+                                        Nội dung cập nhật và tiên tiến
+                                    </h3>
+                                    <p class="text">Khóa học của bạn luôn cập nhật các kiến thức mới nhất và xu hướng
+                                        hiện đại trong lĩnh vực phát triển thương hiệu giáo dục.</p>
+                                </div>
+                            </li>
+                            <li class="item">
+                                <span class="icon thumbnail">
+                                    <img src="images/icons/coding.png" alt="">
+                                </span>
+                                <div class="meta">
+                                    <h3 class="title">Giảng viên giàu kinh nghiệm</h3>
+                                    <p class="text"> Đội ngũ giảng viên là các chuyên gia hàng đầu trong lĩnh vực tiếp
+                                        thị và phát triển thương hiệu, có kinh nghiệm thực tiễn phong phú và thành công
+                                        đã được chứng minh.</p>
+                                </div>
+                            </li>
+                            <li class="item">
+                                <span class="icon thumbnail">
+                                    <img src="images/icons/training-program.png" alt="">
+                                </span>
+                                <div class="meta">
+                                    <h3 class="title">Phương pháp học tập tương tác cao</h3>
+                                    <p class="text">Áp dụng phương pháp giảng dạy tương tác, kết hợp giữa lý thuyết và
+                                        thực hành, giúp học viên dễ dàng nắm bắt kiến thức và ứng dụng vào công việc
+                                        thực tế ngay lập tức.</p>
+                                </div>
+                            </li>
+                            <li class="item">
+                                <span class="icon thumbnail">
+                                    <img src="images/icons/team.png" alt="">
+                                </span>
+                                <div class="meta">
+                                    <h3 class="title">Cộng đồng học viên và mạng lưới đối tác rộng lớn</h3>
+                                    <p class="text">Xây dựng một cộng đồng học viên và mạng lưới đối tác rộng lớn, tạo
+                                        điều kiện cho học viên kết nối, giao lưu và học hỏi lẫn nhau.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6 text-center">
+                        <img src="images/thumb/uuthe.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="block-expert" id="home-expert">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
                         <div class="list-image-experts">
                             <div class="item slick-slide">
                                 <img src="images/experts/expert-1.png" alt="">
@@ -224,7 +289,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-7">
+                    <div class="col-md-6">
                         <span class="h-sub-title">
                             <i class="fas fa-signal-alt-3"></i>
                             Chuyên gia
@@ -290,81 +355,79 @@
                 </div>
             </div>
         </div>
-        <div class="block-why-choose">
+        <div class="block-course">
             <div class="container">
                 <div class="text-center">
                     <span class="h-sub-title">
                         <i class="fas fa-signal-alt-3"></i>
-                        Ưu thế
+                        Khóa học
                     </span>
                 </div>
-                <h2 class="heading heading-center">
-                    Marsmaketing - lựa chọn xứng đáng
-                </h2>
+                <h2 class="heading heading-center">Khóa đào tạo</h2>
                 <div class="row">
-                    <div class="col-md-6">
-                        <ul class="list-content">
-                            <li class="item">
-                                <span class="icon thumbnail">
-                                    <img src="images/icons/customer.png" alt="">
-                                </span>
-                                <div class="meta">
-                                    <div class="title">
-                                        Nắm bắt và ngấm được tư duy lấy khách hàng làm trung tâm
-                                    </div>
+                    <div class="col-md-4 block-course-left">
+                        <div class="course">
+                            <div class="thumbnail">
+                                <img src="images/course/course-1.jpg" alt="">
+                            </div>
+                            <h3 class="course-title">Marketing và Sales giáo dục</h3>
+                            <div class="price-review">
+                                <div class="review">
+                                    <ul class="review-star">
+                                        <li><i class="fas fa-star"></i></li>
+                                        <li><i class="fas fa-star"></i></li>
+                                        <li><i class="fas fa-star"></i></li>
+                                        <li><i class="fas fa-star"></i></li>
+                                        <li><i class="fas fa-star-half-alt"></i></li>
+                                    </ul>
+                                    <div class="number">4.9(3k+)</div>
                                 </div>
-                            </li>
-                            <li class="item">
-                                <span class="icon thumbnail">
-                                    <img src="images/icons/coding.png" alt="">
-                                </span>
-                                <div class="meta">
-                                    <div class="title">
-                                        Hiểu toàn bộ các công cụ & phương pháp liên quan đến quản trị trải nghiệm khách
-                                        hàng
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="item">
-                                <span class="icon thumbnail">
-                                    <img src="images/icons/training-program.png" alt="">
-                                </span>
-                                <div class="meta">
-                                    <div class="title">
-                                        Nắm được tổng thể về một chương trình quản trị trải nghiệm một cách có hệ thống
-                                        cho cả công ty
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="item">
-                                <span class="icon thumbnail">
-                                    <img src="images/icons/cultural-diversity.png" alt="">
-                                </span>
-                                <div class="meta">
-                                    <div class="title">
-                                        Biết cách xây dựng và triển khai văn hóa lấy khách hàng làm trung tâm.
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="item">
-                                <span class="icon thumbnail">
-                                    <img src="images/icons/team.png" alt="">
-                                </span>
-                                <div class="meta">
-                                    <div class="title">
-                                        Toàn bộ đội ngũ có cùng tư duy, cùng cách tiếp cận và cùng ngôn ngữ
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
+                                <div class="price">6.999.000 <sup>đ</sup></div>
+                            </div>
+                            <div class="course-meta">
+                                <ul class="meta">
+                                    <li class="item"><span class="text">13 bài giảng</span></li>
+                                    <li class="item"><span class="text">Trung bình</span></li>
+                                    <li class="item"><span class="text">1 ngày</span></li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-md-6">
-                        <img src="images/thumb/uuthe.png" alt="">
+                    <div class="col-md-8 block-course-right">
+                        <div class="course-info">
+                            <p><i class="fas fa-map-marker-alt"></i><span>Địa điểm:</span> Hà Nội</p>
+                            <p><i class="fas fa-calendar-alt"></i><span>Khai giảng:</span> 12/06/2024</p>
+                            <p><i class="far fa-users-class"></i><span>Lớp:</span> MKT01</p>
+                            <p><i class="far fa-clock"></i><span>Thời gian:</span> 12/06/2024</p>
+                            <p><i class="far fa-bell"></i><span>Thời lượng:</span> 2 buổi</p>
+                            <p><i class="fas fa-paragraph"></i><span>Hình thức:</span> Tích hợp Online và Offline</p>
+                            <div class="tuition">
+                                <div class="tuition-title">
+                                    <i class="fas fa-dollar-sign"></i><span>Học phí:</span>
+                                </div>
+                                <ul class="content-tuition">
+                                    <li>Offline: 2.000.000 VND (Chi phí chưa bao gồm thuế VAT)</li>
+                                    <li>Online: 1.000.000 VND (Chi phí chưa bao gồm thuế VAT)</li>
+                                </ul>
+                            </div>
+                            <div class="content-title">Nội dung:</div>
+                            <div class="content">
+                                <ul>
+                                    <li>Chuẩn hóa kiến thức xây dựng hình ảnh và thương hiệu cá nhân trong thời đại số –
+                                        Nguyên tắc 5W1H đối với hình ảnh cá nhân từ online đến offline;</li>
+                                    <li>Phòng tránh các tình huống xấu xảy ra trong quá trình giao tiếp, đặc biệt là đối
+                                        với khách hàng, đối tác. Từ đó, giảm thiểu nguy cơ khủng hoảng truyền thông.
+                                    </li>
+                                    <li>Hỗ trợ xây dựng văn hóa doanh nghiệp và truyền thông nội bộ</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="block-feedback">
+        </div>
+        <div class="block-feedback" id="home-feedback">
             <div class="container">
                 <div class="text-center">
                     <span class="h-sub-title">
@@ -481,7 +544,7 @@
                 </div>
             </div>
         </div>
-        <div class="block-form">
+        <div class="block-form" id="home-form">
             <div class="container">
                 <div class="row">
                     <div class="col-md-6">
@@ -558,7 +621,7 @@
                 </div>
             </div>
         </div>
-        <div class="block-faq">
+        <div class="block-faq" id="home-faq">
             <div class="container">
                 <div class="row">
                     <div class="col-md-6">

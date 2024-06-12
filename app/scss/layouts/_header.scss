@@ -1,6 +1,6 @@
 .header {
     .primary-nav {
-        padding: 5px 0;
+        padding: 5px 0 10px;
         position: relative;
     }
 }
@@ -11,8 +11,31 @@
 }
 
 .logo-header {
-    width: 80px;
-    height: 90px;
-    background: url(../images/logo/logo-r.png) no-repeat;
-    background-size: cover;
+    width: 70px;
+    height: 80px;
+    background: url(../images/logo/logo.svg) no-repeat;
+    background-size: 100%;
+    transition: all 0.3s;
+}
+
+.brand-logo {
+    margin-bottom: 0;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: $light;
+    z-index: 9;
+}
+
+.fixed-header {
+    box-shadow: 0 2px 16px 0 rgba(0, 41, 87, .1);
+
+    .logo-header {
+        width: 50px;
+        height: 57px;
+    }
 }
