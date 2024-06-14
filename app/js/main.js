@@ -1,6 +1,7 @@
 var slider = {
     init: function () {
         slider.slideExperts();
+        slider.slideCourse();
     },
     slideExperts: function () {
         if ($('.list-image-experts .item').length > 1 && $('.list-content-experts .item').length > 1) {
@@ -19,6 +20,20 @@ var slider = {
                 dots: false,
                 arrows: true,
                 fade: true,
+            });
+        }
+    },
+    slideCourse: function () {
+        var listSlide = $('.list-course');
+        var numberSlide = $('.list-course .course-item').length;
+        if (listSlide.length > 0 && numberSlide >= 1) {
+            listSlide.slick({
+                dots: true,
+                infinite: true,
+                speed: 500,
+                fade: true,
+                arrows: false,
+                cssEase: 'linear'
             });
         }
     }

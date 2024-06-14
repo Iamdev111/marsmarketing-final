@@ -18,7 +18,7 @@
     font-weight: 700;
     font-size: 40px;
     text-transform: uppercase;
-    font-family: Barlow Condensed, sans-serif;
+    font-family: "Barlow Condensed", sans-serif;
     margin-bottom: 20px;
 
     &-center {
@@ -473,7 +473,7 @@
 
 .block-course {
     margin-top: 50px;
-    margin-bottom: 50px;
+    margin-bottom: 80px;
 
     &-left {
         .course {
@@ -580,6 +580,71 @@
     }
 
     .heading {
-        margin-bottom: 40px;
+        margin-bottom: 30px;
+    }
+
+    .course-info {
+        i {
+            color: $brand;
+            width: 20px;
+            margin-right: 5px;
+            text-align: center;
+        }
+
+        span {
+            font-size: 17px;
+            font-weight: 600;
+            font-family: "Barlow Condensed", sans-serif;
+        }
+
+        p {
+            margin-bottom: 0px;
+            padding: 8px 0;
+
+            &:nth-child(2n + 1) {
+                background: #00000003;
+            }
+        }
+    }
+
+    &-right {
+        .title {
+            font-size: 22px;
+            font-weight: 700;
+            font-family: "Barlow Condensed", sans-serif;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+    }
+
+    .tuition {
+        &-title {
+            margin-bottom: 10px;
+        }
+    }
+
+    .content-title {
+        font-weight: 600;
+        font-family: "Barlow Condensed", sans-serif;
+        font-size: 17px;
+        margin-bottom: 10px;
+        position: relative;
+
+        &::after {
+            content: "";
+            width: 82px;
+            height: 1px;
+            background: $brand;
+            position: absolute;
+            left: 0;
+            bottom: -3px;
+        }
+    }
+
+    .content {
+        p {
+            padding: 0;
+            margin-bottom: 10px;
+        }
     }
 }
