@@ -467,13 +467,12 @@
                 margin-left: -70px;
             }
         }
-
     }
 }
 
 .block-course {
     margin-top: 50px;
-    margin-bottom: 80px;
+    margin-bottom: 120px;
 
     &-left {
         .course {
@@ -645,6 +644,57 @@
         p {
             padding: 0;
             margin-bottom: 10px;
+        }
+    }
+
+    .slick-dots {
+        bottom: -45px;
+    }
+}
+
+.block-schedule {
+    margin-bottom: 50px;
+
+    .schedule-heading {
+        display: inline-block;
+        margin: 0 auto;
+        background: #770101;
+        color: $light;
+        padding: 15px 30px;
+        border-radius: 8px 8px 0 0;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-family: "Barlow Condensed", sans-serif;
+        font-size: 20px;
+    }
+
+    .schedule-wrap {
+        padding: 30px;
+        background: #770101;
+        border-radius: 20px;
+    }
+
+    .item-schedule-mini {
+        border-radius: 5px;
+        background-color: $light;
+        padding: 30px 32px;
+        display: block;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .price-m {
+        display: none;
+        margin-top: 5px;
+    }
+
+    .table-class-list {
+        tr {
+            td:first-child {
+                text-align: left;
+                color: #105db2;
+                font-weight: 700;
+            }
         }
     }
 }

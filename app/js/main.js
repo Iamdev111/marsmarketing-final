@@ -11,6 +11,9 @@ var slider = {
                 arrows: false,
                 fade: true,
                 arrows: false,
+                autoplay: true,
+                autoplaySpeed: 3000,
+                speed: 500,
                 asNavFor: '.list-content-experts',
             });
             $('.list-content-experts').slick({
@@ -19,7 +22,10 @@ var slider = {
                 asNavFor: '.list-image-experts',
                 dots: false,
                 arrows: true,
+                autoplay: true,
+                autoplaySpeed: 3000,
                 fade: true,
+                speed: 500,
             });
         }
     },
@@ -33,7 +39,9 @@ var slider = {
                 speed: 500,
                 fade: true,
                 arrows: false,
-                cssEase: 'linear'
+                cssEase: 'linear',
+                autoplay: true,
+                autoplaySpeed: 3000,
             });
         }
     }

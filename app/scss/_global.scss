@@ -76,3 +76,39 @@ button:focus {
         content: "\f104";
     }
 }
+
+.slick-dots {
+    li {
+        height: 8px;
+        width: 8px;
+
+        button {
+            height: 8px;
+            width: 8px;
+            padding: 0;
+
+            &:before {
+                content: "";
+                background: #a5a5a5;
+                height: 8px;
+                width: 8px;
+                border-radius: 8px;
+                opacity: 1;
+            }
+        }
+
+        &.slick-active {
+            width: 25px;
+
+            button {
+                width: 25px;
+
+                &::before {
+                    background: $brand;
+                    opacity: 1;
+                    width: 25px;
+                }
+            }
+        }
+    }
+}

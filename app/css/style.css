@@ -71,6 +71,40 @@ button:focus {
   content: "\f104";
 }
 
+.slick-dots li {
+  height: 8px;
+  width: 8px;
+}
+
+.slick-dots li button {
+  height: 8px;
+  width: 8px;
+  padding: 0;
+}
+
+.slick-dots li button:before {
+  content: "";
+  background: #a5a5a5;
+  height: 8px;
+  width: 8px;
+  border-radius: 8px;
+  opacity: 1;
+}
+
+.slick-dots li.slick-active {
+  width: 25px;
+}
+
+.slick-dots li.slick-active button {
+  width: 25px;
+}
+
+.slick-dots li.slick-active button::before {
+  background: #c22026;
+  opacity: 1;
+  width: 25px;
+}
+
 .btn-signin {
   border: 1px solid #c22026;
   color: #c22026;
@@ -332,6 +366,8 @@ button:focus {
 
 .footer .label-form {
   margin-bottom: 15px;
+  text-transform: uppercase;
+  font-weight: 500;
 }
 
 .logo-footer {
@@ -805,7 +841,7 @@ button:focus {
 
 .block-course {
   margin-top: 50px;
-  margin-bottom: 80px;
+  margin-bottom: 120px;
 }
 
 .block-course-left .course .thumbnail {
@@ -958,6 +994,53 @@ button:focus {
 .block-course .content p {
   padding: 0;
   margin-bottom: 10px;
+}
+
+.block-course .slick-dots {
+  bottom: -45px;
+}
+
+.block-schedule {
+  margin-bottom: 50px;
+}
+
+.block-schedule .schedule-heading {
+  display: inline-block;
+  margin: 0 auto;
+  background: #770101;
+  color: #fff;
+  padding: 15px 30px;
+  border-radius: 8px 8px 0 0;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 20px;
+}
+
+.block-schedule .schedule-wrap {
+  padding: 30px;
+  background: #770101;
+  border-radius: 20px;
+}
+
+.block-schedule .item-schedule-mini {
+  border-radius: 5px;
+  background-color: #fff;
+  padding: 30px 32px;
+  display: block;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.block-schedule .price-m {
+  display: none;
+  margin-top: 5px;
+}
+
+.block-schedule .table-class-list tr td:first-child {
+  text-align: left;
+  color: #105db2;
+  font-weight: 700;
 }
 
 @media (min-width: 1400px) {

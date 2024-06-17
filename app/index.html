@@ -27,9 +27,6 @@
                 <button class="toggle-menu"><span></span></button>
                 <ul class="main-menu navbar-nav main-menu-left">
                     <li class="menu-item">
-                        <a href="/" class="menu-link">Trang chủ</a>
-                    </li>
-                    <li class="menu-item">
                         <a href="home-about" class="scrollTo menu-link">Giới thiệu</a>
                     </li>
                     <li class="menu-item">
@@ -37,6 +34,9 @@
                     </li>
                     <li class="menu-item">
                         <a href="home-feedback" class="scrollTo menu-link">Học viên</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="home-course" class="scrollTo menu-link">Khóa học</a>
                     </li>
                 </ul>
                 <h1 class="brand-logo">
@@ -355,7 +355,7 @@
                 </div>
             </div>
         </div>
-        <div class="block-course">
+        <div class="block-course" id="home-course">
             <div class="container">
                 <div class="text-center">
                     <span class="h-sub-title">
@@ -563,6 +563,85 @@
                 </div>
             </div>
         </div>
+        <div class="block-schedule" id="home-schedule">
+            <div class="container">
+                <div class="text-center">
+                    <span class="h-sub-title">
+                        <i class="fas fa-signal-alt-3"></i>
+                        Lịch học
+                    </span>
+                </div>
+                <h2 class="heading heading-center">Lịch khai giảng</h2>
+                <div class="text-center">
+                    <div class="schedule-heading">Đang diễn ra</div>
+                </div>
+                <div class="schedule-wrap">
+                    <div class="item-schedule-mini">
+                        <div class="table-responsive">
+                            <table class="table-class-list table" cellspacing="0" cellpadding="0" border="0">
+                                <thead>
+                                    <tr>
+                                        <th>Khóa học</th>
+                                        <th>Lịch khai giảng</th>
+                                        <th>Thời lượng</th>
+                                        <th>Đối tượng</th>
+                                        <th>Đăng ký</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td width="30%">
+                                            <a href="">Lịch sinh hoạt NIK FAMILY trên Zoom</a>
+                                            <p></p>
+                                            <div class="price-m">
+                                                <div class="date">Khải giảng: 06/12/2023</div>
+                                                <div class="combo-price">Liên hệ</div>
+                                                <p></p>
+                                            </div>
+                                        </td>
+                                        <td width="15%" class="hide-m">06/12/2023</td>
+                                        <td width="15%" class="hide-pad">Tùy khóa học</td>
+                                        <td width="15%" class="hide-pad">Danh mục sản phẩm NIK</td>
+                                        <td width="10%"><a href="" class="link-reg btn-reg-class">Xem thêm</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="30%">
+                                            <a href="">Lịch sinh hoạt NIK FAMILY trên Zoom</a>
+                                            <p></p>
+                                            <div class="price-m">
+                                                <div class="date">Khải giảng: 06/12/2023</div>
+                                                <div class="combo-price">Liên hệ</div>
+                                                <p></p>
+                                            </div>
+                                        </td>
+                                        <td width="15%" class="hide-m">06/12/2023</td>
+                                        <td width="15%" class="hide-pad">Tùy khóa học</td>
+                                        <td width="15%" class="hide-pad">Danh mục sản phẩm NIK</td>
+                                        <td width="10%"><a href="" class="link-reg btn-reg-class">Xem thêm</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="30%">
+                                            <a href="">Lịch sinh hoạt NIK FAMILY trên Zoom</a>
+                                            <p></p>
+                                            <div class="price-m">
+                                                <div class="date">Khải giảng: 06/12/2023</div>
+                                                <div class="combo-price">Liên hệ</div>
+                                                <p></p>
+                                            </div>
+                                        </td>
+                                        <td width="15%" class="hide-m">06/12/2023</td>
+                                        <td width="15%" class="hide-pad">Tùy khóa học</td>
+                                        <td width="15%" class="hide-pad">Danh mục sản phẩm NIK</td>
+                                        <td width="10%"><a href="" class="link-reg btn-reg-class">Xem thêm</a></td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         </div>
         <div class="block-feedback" id="home-feedback">
             <div class="container">
@@ -702,7 +781,7 @@
                                 </li>
                                 <li class="item">
                                     <i class="fal fa-phone-alt"></i>
-                                    <span>Hotline:</span> <a href="tel:0388.824.409">0388.824.409</a>
+                                    <span>Hotline:</span> <a href="tel:096.1908.964">096.1908.964</a>
                                 </li>
                             </ul>
                         </div>
@@ -859,8 +938,9 @@
                 </div>
                 <div class="col-md-6">
                     <form action="" class="form-email">
-                        <label class="label-form">Đăng ký nhận tin tư vấn</label>
-                        <input type="email" name="email" class="form-control" placeholder="Nhập email của bạn">
+                        <label class="label-form">Gửi yêu cầu tư vấn miễn phí</label>
+                        <input type="text" name="numberphone" class="form-control" placeholder="Nhập sđt của bạn"
+                            pattern="(\+84|0){1}(9|8|7|5|3){1}[0-9]{8}">
                         <button type="submit" class="btn-mail">Gửi <i class="fas fa-paper-plane"></i></button>
                     </form>
                 </div>
