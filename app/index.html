@@ -8,7 +8,8 @@
     <title>MarsMarketing</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="assets/slick-1.6.0/slick.css">
     <link rel="stylesheet" href="assets/slick-1.6.0/slick-theme.css">
@@ -58,6 +59,7 @@
             </div>
         </div>
     </header>
+    <div class="overlay"></div>
     <main class="main-page">
         <div class="block-banner">
             <div class="container-fluid container-banner">
@@ -67,8 +69,9 @@
                             <h2 class="heading-slider">Tiếp thị phát triển<br>Doanh nghiệp<br>Cùng chúng tôi
                             </h2>
                             <div class="banner-action">
-                                <button type="button" class="btn-register">Đăng ký ngay</button>
-                                <button type="button" class="btn-signin">Nhận tư vấn</button>
+                                <a href="home-form" class="btn-register scrollTo">Đăng ký ngay</a>
+                                <button type="button" class="btn-signin" data-toggle="modal"
+                                    data-target="#modalRegister">Nhận tư vấn</button>
                             </div>
                             <div class="d-flex banner-below">
                                 <div class="d-flex total-user">
@@ -120,7 +123,7 @@
         <div class="block-about" id="home-about">
             <div class="container">
                 <span class="h-sub-title">
-                    <i class="fas fa-signal-alt-3"></i>
+                    <i class="fal fa-building"></i>
                     Giới thiệu
                 </span>
                 <h2 class="heading">
@@ -135,7 +138,8 @@
                             <div class="inner text-content">
                                 <h3 class="core-title">Tầm nhìn</h3>
                                 <p>
-                                    Trở thành đối tác hàng đầu trong việc phát triển thương hiệu giáo dục, giúp các trung tâm giáo dục khẳng định vị thế và mở rộng ảnh hưởng trên toàn quốc.</p>
+                                    Trở thành đối tác hàng đầu trong việc phát triển thương hiệu giáo dục, giúp các
+                                    trung tâm giáo dục khẳng định vị thế và mở rộng ảnh hưởng trên toàn quốc.</p>
                             </div>
                         </div>
                     </div>
@@ -146,7 +150,9 @@
                         <div class="col-md-6 order-2 order-md-2 ">
                             <div class="inner text-content">
                                 <h3 class="core-title">Sứ mệnh</h3>
-                                <p>Cung cấp các khóa học chất lượng cao, kết hợp kiến thức chuyên sâu và công nghệ hiện đại, nhằm nâng cao hiệu quả tiếp thị và tuyển sinh cho các trung tâm giáo dục. Chúng tôi cam kết mang đến giá trị bền vững và đồng hành
+                                <p>Cung cấp các khóa học chất lượng cao, kết hợp kiến thức chuyên sâu và công nghệ hiện
+                                    đại, nhằm nâng cao hiệu quả tiếp thị và tuyển sinh cho các trung tâm giáo dục. Chúng
+                                    tôi cam kết mang đến giá trị bền vững và đồng hành
                                     cùng sự phát triển lâu dài của các đối tác.</p>
                             </div>
                         </div>
@@ -159,8 +165,11 @@
                             <div class="inner text-content">
                                 <h3 class="core-title">Giá trị cốt lõi</h3>
                                 <p>
-                                    Cam kết cung cấp những khóa học với nội dung và phương pháp tiên tiến, đảm bảo mang lại hiệu quả thực tiễn cao nhất. Luôn luôn cải tiến và áp dụng những giải pháp công nghệ hiện đại để nâng cao chất lượng dịch vụ. Đội ngũ giảng viên và nhân viên luôn
-                                    làm việc với tinh thần trách nhiệm cao, đặt lợi ích của học viên và đối tác lên hàng đầu.
+                                    Cam kết cung cấp những khóa học với nội dung và phương pháp tiên tiến, đảm bảo mang
+                                    lại hiệu quả thực tiễn cao nhất. Luôn luôn cải tiến và áp dụng những giải pháp công
+                                    nghệ hiện đại để nâng cao chất lượng dịch vụ. Đội ngũ giảng viên và nhân viên luôn
+                                    làm việc với tinh thần trách nhiệm cao, đặt lợi ích của học viên và đối tác lên hàng
+                                    đầu.
                                 </p>
                             </div>
                         </div>
@@ -173,7 +182,9 @@
                             <div class="inner text-content">
                                 <h3 class="core-title">Cộng đồng bền vững</h3>
                                 <p>
-                                    Chúng tôi không chỉ tập trung vào việc cung cấp các khóa học mà còn chú trọng xây dựng một cộng đồng học tập và phát triển bền vững. Với mục tiêu tạo ra môi trường kết nối, chia sẻ kiến thức và kinh nghiệm.
+                                    Chúng tôi không chỉ tập trung vào việc cung cấp các khóa học mà còn chú trọng xây
+                                    dựng một cộng đồng học tập và phát triển bền vững. Với mục tiêu tạo ra môi trường
+                                    kết nối, chia sẻ kiến thức và kinh nghiệm.
                                 </p>
                             </div>
                         </div>
@@ -186,8 +197,12 @@
                             <div class="inner text-content">
                                 <h3 class="core-title">Tư vấn doanh nghiệp</h3>
                                 <p>
-                                    Chúng tôi cam kết hỗ trợ các doanh nghiệp đạt được hiệu quả tối ưu trong hoạt động kinh doanh thông qua các dịch vụ tư vấn chuyên nghiệp và các giải pháp thực tiễn. Đánh giá chi tiết tình hình hiện tại của doanh nghiệp, xác định điểm mạnh, điểm yếu và
-                                    những cơ hội phát triển. Thiết lập các chỉ số đánh giá hiệu quả (KPI) và theo dõi tiến trình thực hiện.
+                                    Chúng tôi cam kết hỗ trợ các doanh nghiệp đạt được hiệu quả tối ưu trong hoạt động
+                                    kinh doanh thông qua các dịch vụ tư vấn chuyên nghiệp và các giải pháp thực tiễn.
+                                    Đánh giá chi tiết tình hình hiện tại của doanh nghiệp, xác định điểm mạnh, điểm yếu
+                                    và
+                                    những cơ hội phát triển. Thiết lập các chỉ số đánh giá hiệu quả (KPI) và theo dõi
+                                    tiến trình thực hiện.
                                 </p>
                             </div>
                         </div>
@@ -195,68 +210,17 @@
                 </div>
             </div>
         </div>
-        <div class="block-why-choose" id="home-choose">
+        <div class="block-expert" id="home-expert">
             <div class="container">
                 <div class="text-center">
                     <span class="h-sub-title">
-                        <i class="fas fa-signal-alt-3"></i>
-                        Ưu thế
+                        <i class="fas fa-user-graduate"></i>
+                        Chuyên gia
                     </span>
                 </div>
                 <h2 class="heading heading-center">
-                    Marsmaketing - lựa chọn xứng đáng
+                    Đội ngũ chuyên gia
                 </h2>
-                <div class="row">
-                    <div class="col-md-6">
-                        <ul class="list-content">
-                            <li class="item">
-                                <span class="icon thumbnail">
-                                    <img src="images/icons/customer.png" alt="">
-                                </span>
-                                <div class="meta">
-                                    <h3 class="title">
-                                        Nội dung cập nhật và tiên tiến
-                                    </h3>
-                                    <p class="text">Khóa học của bạn luôn cập nhật các kiến thức mới nhất và xu hướng hiện đại trong lĩnh vực phát triển thương hiệu giáo dục.</p>
-                                </div>
-                            </li>
-                            <li class="item">
-                                <span class="icon thumbnail">
-                                    <img src="images/icons/coding.png" alt="">
-                                </span>
-                                <div class="meta">
-                                    <h3 class="title">Giảng viên giàu kinh nghiệm</h3>
-                                    <p class="text"> Đội ngũ giảng viên là các chuyên gia hàng đầu trong lĩnh vực tiếp thị và phát triển thương hiệu, có kinh nghiệm thực tiễn phong phú và thành công đã được chứng minh.</p>
-                                </div>
-                            </li>
-                            <li class="item">
-                                <span class="icon thumbnail">
-                                    <img src="images/icons/training-program.png" alt="">
-                                </span>
-                                <div class="meta">
-                                    <h3 class="title">Phương pháp học tập tương tác cao</h3>
-                                    <p class="text">Áp dụng phương pháp giảng dạy tương tác, kết hợp giữa lý thuyết và thực hành, giúp học viên dễ dàng nắm bắt kiến thức và ứng dụng vào công việc thực tế ngay lập tức.</p>
-                                </div>
-                            </li>
-                            <li class="item">
-                                <span class="icon thumbnail">
-                                    <img src="images/icons/team.png" alt="">
-                                </span>
-                                <div class="meta">
-                                    <h3 class="title">Cộng đồng học viên và mạng lưới đối tác rộng lớn</h3>
-                                    <p class="text">Xây dựng một cộng đồng học viên và mạng lưới đối tác rộng lớn, tạo điều kiện cho học viên kết nối, giao lưu và học hỏi lẫn nhau.</p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-md-6 text-center">
-                        <img src="images/thumb/uuthe.png" alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="block-expert" id="home-expert">
-            <div class="container">
                 <div class="row align-items-center">
                     <div class="col-md-6">
                         <div class="list-image-experts">
@@ -272,18 +236,13 @@
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <span class="h-sub-title">
-                            <i class="fas fa-signal-alt-3"></i>
-                            Chuyên gia
-                        </span>
-                        <h2 class="heading">
-                            Đội ngũ chuyên gia
-                        </h2>
                         <div class="list-content-experts">
                             <div class="item slick-slide">
                                 <span class="apostrophe"><i class="fas fa-quote-left"></i></span>
                                 <div class="content">
-                                    "Nhiệt huyết - Trách nhiệm - Linh Hoạt - Ham học - Tốc Độ" - Là những từ khóa chính mà tôi đặc biệt chú ý đến để góp phần phát triển, định hướng và dẫn dắt học viên hướng đến thành công.
+                                    "Nhiệt huyết - Trách nhiệm - Linh Hoạt - Ham học - Tốc Độ" - Là những từ khóa chính
+                                    mà tôi đặc biệt chú ý đến để góp phần phát triển, định hướng và dẫn dắt học viên
+                                    hướng đến thành công.
                                 </div>
                                 <div class="meta-people">
                                     <div class="avatar thumbnail">
@@ -298,7 +257,9 @@
                             <div class="item slick-slide">
                                 <span class="apostrophe"><i class="fas fa-quote-left"></i></span>
                                 <div class="content">
-                                    "Nhiệt huyết - Trách nhiệm - Linh Hoạt - Ham học - Tốc Độ" - Là những từ khóa chính mà tôi đặc biệt chú ý đến để góp phần phát triển, định hướng và dẫn dắt học viên hướng đến thành công.
+                                    "Nhiệt huyết - Trách nhiệm - Linh Hoạt - Ham học - Tốc Độ" - Là những từ khóa chính
+                                    mà tôi đặc biệt chú ý đến để góp phần phát triển, định hướng và dẫn dắt học viên
+                                    hướng đến thành công.
                                 </div>
                                 <div class="meta-people">
                                     <div class="avatar thumbnail">
@@ -313,7 +274,10 @@
                             <div class="item slick-slide">
                                 <span class="apostrophe"><i class="fas fa-quote-left"></i></span>
                                 <div class="content">
-                                    "Nhiệt huyết - Trách nhiệm - Linh Hoạt - Ham học - Tốc Độ" - Là những từ khóa chính mà tôi đặc biệt chú ý đến để góp phần phát triển, định hướng và dẫn dắt học viên hướng đến thành công, đến để góp phần phát triển, định hướng và dẫn dắt học viên hướng
+                                    "Nhiệt huyết - Trách nhiệm - Linh Hoạt - Ham học - Tốc Độ" - Là những từ khóa chính
+                                    mà tôi đặc biệt chú ý đến để góp phần phát triển, định hướng và dẫn dắt học viên
+                                    hướng đến thành công, đến để góp phần phát triển, định hướng và dẫn dắt học viên
+                                    hướng
                                     đến thành công.
                                 </div>
                                 <div class="meta-people">
@@ -331,11 +295,77 @@
                 </div>
             </div>
         </div>
+        <div class="block-why-choose" id="home-choose">
+            <div class="container">
+                <div class="text-center">
+                    <span class="h-sub-title">
+                        <i class="fas fa-sun-haze"></i>
+                        Ưu thế
+                    </span>
+                </div>
+                <h2 class="heading heading-center">
+                    <span>Marsmaketing</span> - lựa chọn xứng đáng
+                </h2>
+                <div class="row">
+                    <div class="col-md-6">
+                        <ul class="list-content">
+                            <li class="item">
+                                <span class="icon thumbnail">
+                                    <img src="images/icons/customer.png" alt="">
+                                </span>
+                                <div class="meta">
+                                    <h3 class="title">
+                                        Nội dung cập nhật và tiên tiến
+                                    </h3>
+                                    <p class="text">Khóa học của bạn luôn cập nhật các kiến thức mới nhất và xu hướng
+                                        hiện đại trong lĩnh vực phát triển thương hiệu giáo dục.</p>
+                                </div>
+                            </li>
+                            <li class="item">
+                                <span class="icon thumbnail">
+                                    <img src="images/icons/coding.png" alt="">
+                                </span>
+                                <div class="meta">
+                                    <h3 class="title">Giảng viên giàu kinh nghiệm</h3>
+                                    <p class="text"> Đội ngũ giảng viên là các chuyên gia hàng đầu trong lĩnh vực tiếp
+                                        thị và phát triển thương hiệu, có kinh nghiệm thực tiễn phong phú và thành công
+                                        đã được chứng minh.</p>
+                                </div>
+                            </li>
+                            <li class="item">
+                                <span class="icon thumbnail">
+                                    <img src="images/icons/training-program.png" alt="">
+                                </span>
+                                <div class="meta">
+                                    <h3 class="title">Phương pháp học tập tương tác cao</h3>
+                                    <p class="text">Áp dụng phương pháp giảng dạy tương tác, kết hợp giữa lý thuyết và
+                                        thực hành, giúp học viên dễ dàng nắm bắt kiến thức và ứng dụng vào công việc
+                                        thực tế ngay lập tức.</p>
+                                </div>
+                            </li>
+                            <li class="item">
+                                <span class="icon thumbnail">
+                                    <img src="images/icons/team.png" alt="">
+                                </span>
+                                <div class="meta">
+                                    <h3 class="title">Cộng đồng học viên và mạng lưới đối tác rộng lớn</h3>
+                                    <p class="text">Xây dựng một cộng đồng học viên và mạng lưới đối tác rộng lớn, tạo
+                                        điều kiện cho học viên kết nối, giao lưu và học hỏi lẫn nhau.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6 text-center">
+                        <img src="images/thumb/uuthe.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="block-course" id="home-course">
             <div class="container">
                 <div class="text-center">
                     <span class="h-sub-title">
-                        <i class="fas fa-signal-alt-3"></i>
+                        <i class="fas fa-list-alt"></i>
                         Khóa học
                     </span>
                 </div>
@@ -384,17 +414,21 @@
                                         <div class="col-md-6">
                                             <p><i class="far fa-clock"></i><span>Thời gian:</span> 12/06/2024</p>
                                             <p><i class="far fa-bell"></i><span>Thời lượng:</span> 2 buổi</p>
-                                            <p><i class="fas fa-paragraph"></i><span>Hình thức:</span> Tích hợp Online và Offline
+                                            <p><i class="fas fa-paragraph"></i><span>Hình thức:</span> Tích hợp Online
+                                                và Offline
                                             </p>
                                         </div>
                                     </div>
                                     <div class="content-title"><i class="fas fa-file-signature"></i> Nội dung:</div>
                                     <div class="content">
                                         <p>
-                                            Chuẩn hóa kiến thức xây dựng hình ảnh và thương hiệu cá nhân trong thời đại số - Nguyên tắc 5W1H đối với hình ảnh cá nhân từ online đến offline.
+                                            Chuẩn hóa kiến thức xây dựng hình ảnh và thương hiệu cá nhân trong thời đại
+                                            số - Nguyên tắc 5W1H đối với hình ảnh cá nhân từ online đến offline.
                                         </p>
                                         <p>
-                                            Phòng tránh các tình huống xấu xảy ra trong quá trình giao tiếp, đặc biệt là đối với khách hàng, đối tác. Từ đó, giảm thiểu nguy cơ khủng hoảng truyền thông.
+                                            Phòng tránh các tình huống xấu xảy ra trong quá trình giao tiếp, đặc biệt là
+                                            đối với khách hàng, đối tác. Từ đó, giảm thiểu nguy cơ khủng hoảng truyền
+                                            thông.
                                         </p>
                                         <p>Hỗ trợ xây dựng văn hóa doanh nghiệp và truyền thông nội bộ.</p>
                                     </div>
@@ -445,17 +479,21 @@
                                         <div class="col-md-6">
                                             <p><i class="far fa-clock"></i><span>Thời gian:</span> 12/06/2024</p>
                                             <p><i class="far fa-bell"></i><span>Thời lượng:</span> 2 buổi</p>
-                                            <p><i class="fas fa-paragraph"></i><span>Hình thức:</span> Tích hợp Online và Offline
+                                            <p><i class="fas fa-paragraph"></i><span>Hình thức:</span> Tích hợp Online
+                                                và Offline
                                             </p>
                                         </div>
                                     </div>
                                     <div class="content-title"><i class="fas fa-file-signature"></i> Nội dung:</div>
                                     <div class="content">
                                         <p>
-                                            Chuẩn hóa kiến thức xây dựng hình ảnh và thương hiệu cá nhân trong thời đại số - Nguyên tắc 5W1H đối với hình ảnh cá nhân từ online đến offline.
+                                            Chuẩn hóa kiến thức xây dựng hình ảnh và thương hiệu cá nhân trong thời đại
+                                            số - Nguyên tắc 5W1H đối với hình ảnh cá nhân từ online đến offline.
                                         </p>
                                         <p>
-                                            Phòng tránh các tình huống xấu xảy ra trong quá trình giao tiếp, đặc biệt là đối với khách hàng, đối tác. Từ đó, giảm thiểu nguy cơ khủng hoảng truyền thông.
+                                            Phòng tránh các tình huống xấu xảy ra trong quá trình giao tiếp, đặc biệt là
+                                            đối với khách hàng, đối tác. Từ đó, giảm thiểu nguy cơ khủng hoảng truyền
+                                            thông.
                                         </p>
                                         <p>Hỗ trợ xây dựng văn hóa doanh nghiệp và truyền thông nội bộ.</p>
                                     </div>
@@ -506,17 +544,21 @@
                                         <div class="col-md-6">
                                             <p><i class="far fa-clock"></i><span>Thời gian:</span> 12/06/2024</p>
                                             <p><i class="far fa-bell"></i><span>Thời lượng:</span> 2 buổi</p>
-                                            <p><i class="fas fa-paragraph"></i><span>Hình thức:</span> Tích hợp Online và Offline
+                                            <p><i class="fas fa-paragraph"></i><span>Hình thức:</span> Tích hợp Online
+                                                và Offline
                                             </p>
                                         </div>
                                     </div>
                                     <div class="content-title"><i class="fas fa-file-signature"></i> Nội dung:</div>
                                     <div class="content">
                                         <p>
-                                            Chuẩn hóa kiến thức xây dựng hình ảnh và thương hiệu cá nhân trong thời đại số - Nguyên tắc 5W1H đối với hình ảnh cá nhân từ online đến offline.
+                                            Chuẩn hóa kiến thức xây dựng hình ảnh và thương hiệu cá nhân trong thời đại
+                                            số - Nguyên tắc 5W1H đối với hình ảnh cá nhân từ online đến offline.
                                         </p>
                                         <p>
-                                            Phòng tránh các tình huống xấu xảy ra trong quá trình giao tiếp, đặc biệt là đối với khách hàng, đối tác. Từ đó, giảm thiểu nguy cơ khủng hoảng truyền thông.
+                                            Phòng tránh các tình huống xấu xảy ra trong quá trình giao tiếp, đặc biệt là
+                                            đối với khách hàng, đối tác. Từ đó, giảm thiểu nguy cơ khủng hoảng truyền
+                                            thông.
                                         </p>
                                         <p>Hỗ trợ xây dựng văn hóa doanh nghiệp và truyền thông nội bộ.</p>
                                     </div>
@@ -531,7 +573,7 @@
             <div class="container">
                 <div class="text-center">
                     <span class="h-sub-title">
-                        <i class="fas fa-signal-alt-3"></i>
+                        <i class="fal fa-calendar-star"></i>
                         Lịch học
                     </span>
                 </div>
@@ -551,9 +593,10 @@
                         <div class="item">Thứ 3, 4</div>
                         <div class="item">Tố Hữu, Hà Nội</div>
                         <div class="item">
-                            <div class="item-method">Học tại lớp</div>
+                            <div class="item-method item-method-orange">Học tại lớp</div>
                         </div>
-                        <div class="item"><button>Đăng ký</button></div>
+                        <div class="item"><button class="btn-signin" data-toggle="modal"
+                                data-target="#modalRegister">Đăng ký</button></div>
                     </div>
                     <div class="schedule-container">
                         <div class="item">Lịch sinh hoạt khoá học A</div>
@@ -561,9 +604,10 @@
                         <div class="item">Thứ 3, 4</div>
                         <div class="item">Tố Hữu, Hà Nội</div>
                         <div class="item">
-                            <div class="item-method">Học tại lớp</div>
+                            <div class="item-method item-method-blue">Học Online</div>
                         </div>
-                        <div class="item"><button>Đăng ký</button></div>
+                        <div class="item"><button class="btn-signin" data-toggle="modal"
+                                data-target="#modalRegister">Đăng ký</button></div>
                     </div>
                     <div class="schedule-container">
                         <div class="item">Lịch sinh hoạt khoá học A</div>
@@ -571,9 +615,10 @@
                         <div class="item">Thứ 3, 4</div>
                         <div class="item">Tố Hữu, Hà Nội</div>
                         <div class="item">
-                            <div class="item-method">Học tại lớp</div>
+                            <div class="item-method item-method-orange">Học tại lớp</div>
                         </div>
-                        <div class="item"><button>Đăng ký</button></div>
+                        <div class="item"><button class="btn-signin" data-toggle="modal"
+                                data-target="#modalRegister">Đăng ký</button></div>
                     </div>
                     <div class="schedule-container">
                         <div class="item">Lịch sinh hoạt khoá học A</div>
@@ -581,9 +626,10 @@
                         <div class="item">Thứ 3, 4</div>
                         <div class="item">Tố Hữu, Hà Nội</div>
                         <div class="item">
-                            <div class="item-method">Học tại lớp</div>
+                            <div class="item-method item-method-blue">Học Online</div>
                         </div>
-                        <div class="item"><button>Đăng ký</button></div>
+                        <div class="item"><button class="btn-signin" data-toggle="modal"
+                                data-target="#modalRegister">Đăng ký</button></div>
                     </div>
                     <div class="schedule-container">
                         <div class="item">Lịch sinh hoạt khoá học A</div>
@@ -591,29 +637,32 @@
                         <div class="item">Thứ 3, 4</div>
                         <div class="item">Tố Hữu, Hà Nội</div>
                         <div class="item">
-                            <div class="item-method">Học tại lớp</div>
+                            <div class="item-method item-method-orange">Học tại lớp</div>
                         </div>
-                        <div class="item"><button>Đăng ký</button></div>
+                        <div class="item"><button class="btn-signin" data-toggle="modal"
+                                data-target="#modalRegister">Đăng ký</button></div>
                     </div>
                 </div>
             </div>
-        </div>
         </div>
         <div class="block-feedback" id="home-feedback">
             <div class="container">
                 <div class="text-center">
                     <span class="h-sub-title">
-                        <i class="fas fa-signal-alt-3"></i>
+                        <i class="far fa-users"></i>
                         Học viên
                     </span>
                 </div>
-                <h2 class="heading heading-center">Chia sẻ từ học viên</h2>
-                <div class="sub-heading">Những chia sẻ đầy cảm hứng và sự hài lòng từ những học viên của chúng tôi. Những người đã bắt đầu thực hiện thay đổi bản thân</div>
+                <h2 class="heading heading-center">5000+ học viên đã lựa chọn <span>Marsmarketing</span></h2>
+                <div class="sub-heading">Những chia sẻ đầy cảm hứng và sự hài lòng từ những học viên của chúng tôi.
+                    Những người đã bắt đầu thực hiện thay đổi bản thân</div>
                 <div class="row">
                     <div class="col-md-4">
                         <div class="inner">
                             <i class="fas fa-quote-left"></i>
-                            <p>Workshop quá nhiều kiến thức mới em ạ. Đúng là như cô nói, làm nhân hiệu để giúp mình tăng tốc/tịnh tiến mỗi năm rồi sẽ đạt được thứ mình mơ ước. Em cảm ơn cô, buổi học thật ý nghĩa.</p>
+                            <p>Workshop quá nhiều kiến thức mới em ạ. Đúng là như cô nói, làm nhân hiệu để giúp mình
+                                tăng tốc/tịnh tiến mỗi năm rồi sẽ đạt được thứ mình mơ ước. Em cảm ơn cô, buổi học thật
+                                ý nghĩa.</p>
                             <div class="meta-people">
                                 <div class="avatar thumbnail">
                                     <img src="images/customer/image-1.png" alt="">
@@ -628,7 +677,9 @@
                     <div class="col-md-4">
                         <div class="inner">
                             <i class="fas fa-quote-left"></i>
-                            <p>Workshop quá nhiều kiến thức mới em ạ. Đúng là như cô nói, làm nhân hiệu để giúp mình tăng tốc/tịnh tiến mỗi năm rồi sẽ đạt được thứ mình mơ ước. Em cảm ơn cô, buổi học thật ý nghĩa.</p>
+                            <p>Workshop quá nhiều kiến thức mới em ạ. Đúng là như cô nói, làm nhân hiệu để giúp mình
+                                tăng tốc/tịnh tiến mỗi năm rồi sẽ đạt được thứ mình mơ ước. Em cảm ơn cô, buổi học thật
+                                ý nghĩa.</p>
                             <div class="meta-people">
                                 <div class="avatar thumbnail">
                                     <img src="images/customer/image-1.png" alt="">
@@ -643,7 +694,9 @@
                     <div class="col-md-4">
                         <div class="inner">
                             <i class="fas fa-quote-left"></i>
-                            <p>Workshop quá nhiều kiến thức mới em ạ. Đúng là như cô nói, làm nhân hiệu để giúp mình tăng tốc/tịnh tiến mỗi năm rồi sẽ đạt được thứ mình mơ ước. Em cảm ơn cô, buổi học thật ý nghĩa.</p>
+                            <p>Workshop quá nhiều kiến thức mới em ạ. Đúng là như cô nói, làm nhân hiệu để giúp mình
+                                tăng tốc/tịnh tiến mỗi năm rồi sẽ đạt được thứ mình mơ ước. Em cảm ơn cô, buổi học thật
+                                ý nghĩa.</p>
                             <div class="meta-people">
                                 <div class="avatar thumbnail">
                                     <img src="images/customer/image-1.png" alt="">
@@ -658,7 +711,9 @@
                     <div class="col-md-4">
                         <div class="inner">
                             <i class="fas fa-quote-left"></i>
-                            <p>Workshop quá nhiều kiến thức mới em ạ. Đúng là như cô nói, làm nhân hiệu để giúp mình tăng tốc/tịnh tiến mỗi năm rồi sẽ đạt được thứ mình mơ ước. Em cảm ơn cô, buổi học thật ý nghĩa.</p>
+                            <p>Workshop quá nhiều kiến thức mới em ạ. Đúng là như cô nói, làm nhân hiệu để giúp mình
+                                tăng tốc/tịnh tiến mỗi năm rồi sẽ đạt được thứ mình mơ ước. Em cảm ơn cô, buổi học thật
+                                ý nghĩa.</p>
                             <div class="meta-people">
                                 <div class="avatar thumbnail">
                                     <img src="images/customer/image-1.png" alt="">
@@ -673,7 +728,9 @@
                     <div class="col-md-4">
                         <div class="inner">
                             <i class="fas fa-quote-left"></i>
-                            <p>Workshop quá nhiều kiến thức mới em ạ. Đúng là như cô nói, làm nhân hiệu để giúp mình tăng tốc/tịnh tiến mỗi năm rồi sẽ đạt được thứ mình mơ ước. Em cảm ơn cô, buổi học thật ý nghĩa.</p>
+                            <p>Workshop quá nhiều kiến thức mới em ạ. Đúng là như cô nói, làm nhân hiệu để giúp mình
+                                tăng tốc/tịnh tiến mỗi năm rồi sẽ đạt được thứ mình mơ ước. Em cảm ơn cô, buổi học thật
+                                ý nghĩa.</p>
                             <div class="meta-people">
                                 <div class="avatar thumbnail">
                                     <img src="images/customer/image-1.png" alt="">
@@ -688,7 +745,9 @@
                     <div class="col-md-4">
                         <div class="inner">
                             <i class="fas fa-quote-left"></i>
-                            <p>Workshop quá nhiều kiến thức mới em ạ. Đúng là như cô nói, làm nhân hiệu để giúp mình tăng tốc/tịnh tiến mỗi năm rồi sẽ đạt được thứ mình mơ ước. Em cảm ơn cô, buổi học thật ý nghĩa.</p>
+                            <p>Workshop quá nhiều kiến thức mới em ạ. Đúng là như cô nói, làm nhân hiệu để giúp mình
+                                tăng tốc/tịnh tiến mỗi năm rồi sẽ đạt được thứ mình mơ ước. Em cảm ơn cô, buổi học thật
+                                ý nghĩa.</p>
                             <div class="meta-people">
                                 <div class="avatar thumbnail">
                                     <img src="images/customer/image-1.png" alt="">
@@ -696,6 +755,96 @@
                                 <div class="info">
                                     <div class="name">Ms.Quyên</div>
                                     <div class="job-title">Marketing Manager</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="block-faq" id="home-faq">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <span class="h-sub-title">
+                            <i class="far fa-question-circle"></i>
+                            FAQ
+                        </span>
+                        <h2 class="heading">
+                            Câu hỏi thường gặp
+                        </h2>
+                        <div class="sub-heading">
+                            Bạn sẽ tìm thấy giải pháp toàn diện cho tất cả các thắc mắc của mình liên quan đến các khóa
+                            học của chúng tôi
+                        </div>
+                        <img src="images/businessman.jpg" alt="">
+                    </div>
+                    <div class="col-md-6">
+                        <div class="list-faq">
+                            <div class="item-faq active">
+                                <div class="faq-name">What is Digital Marketing Mastery?</div>
+                                <span class="extend"></span>
+                                <div class="faq-content" style="display: block;">
+                                    Digital eadge is an online platform where you can find a variety of digital
+                                    marketing course created by industry experts. Whether you're a begin ner looking to
+                                    learn the basics or a seasoned marketer wanting to advance your skills, we have
+                                    courses to
+                                    suit your needs.
+                                </div>
+                            </div>
+                            <div class="item-faq">
+                                <div class="faq-name">What is Digital Marketing Mastery?</div>
+                                <span class="extend"></span>
+                                <div class="faq-content">
+                                    Digital eadge is an online platform where you can find a variety of digital
+                                    marketing course created by industry experts. Whether you're a begin ner looking to
+                                    learn the basics or a seasoned marketer wanting to advance your skills, we have
+                                    courses to
+                                    suit your needs.
+                                </div>
+                            </div>
+                            <div class="item-faq">
+                                <div class="faq-name">What is Digital Marketing Mastery?</div>
+                                <span class="extend"></span>
+                                <div class="faq-content">
+                                    Digital eadge is an online platform where you can find a variety of digital
+                                    marketing course created by industry experts. Whether you're a begin ner looking to
+                                    learn the basics or a seasoned marketer wanting to advance your skills, we have
+                                    courses to
+                                    suit your needs.
+                                </div>
+                            </div>
+                            <div class="item-faq">
+                                <div class="faq-name">What is Digital Marketing Mastery?</div>
+                                <span class="extend"></span>
+                                <div class="faq-content">
+                                    Digital eadge is an online platform where you can find a variety of digital
+                                    marketing course created by industry experts. Whether you're a begin ner looking to
+                                    learn the basics or a seasoned marketer wanting to advance your skills, we have
+                                    courses to
+                                    suit your needs.
+                                </div>
+                            </div>
+                            <div class="item-faq">
+                                <div class="faq-name">What is Digital Marketing Mastery?</div>
+                                <span class="extend"></span>
+                                <div class="faq-content">
+                                    Digital eadge is an online platform where you can find a variety of digital
+                                    marketing course created by industry experts. Whether you're a begin ner looking to
+                                    learn the basics or a seasoned marketer wanting to advance your skills, we have
+                                    courses to
+                                    suit your needs.
+                                </div>
+                            </div>
+                            <div class="item-faq">
+                                <div class="faq-name">What is Digital Marketing Mastery?</div>
+                                <span class="extend"></span>
+                                <div class="faq-content">
+                                    Digital eadge is an online platform where you can find a variety of digital
+                                    marketing course created by industry experts. Whether you're a begin ner looking to
+                                    learn the basics or a seasoned marketer wanting to advance your skills, we have
+                                    courses to
+                                    suit your needs.
                                 </div>
                             </div>
                         </div>
@@ -705,7 +854,62 @@
         </div>
         <div class="block-form" id="home-form">
             <div class="container">
+                <div class="text-center">
+                    <span class="h-sub-title">
+                        <i class="far fa-registered"></i>
+                        Đăng ký
+                    </span>
+                </div>
+                <h2 class="heading heading-center">Đăng ký khóa học</h2>
                 <div class="row">
+                    <div class="col-md-6">
+                        <div class="wrap-right">
+                            <form action="" class="form-order form-ggs">
+                                <h3 class="title-form">Đăng ký học/tìm hiểu</h3>
+                                <div class="form-group">
+                                    <label for="">Họ và tên <span>(*)</span></label>
+                                    <input type="text" class="form-control" name="fullname" placeholder="Nhập họ tên"
+                                        required>
+                                </div>
+                                <div class="form-row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="">Số điện thoại <span>(*)</span></label>
+                                            <input type="text" class="form-control" name="numberphone"
+                                                placeholder="Nhập số điện thoại"
+                                                pattern="(\+84|0){1}(9|8|7|5|3){1}[0-9]{8}">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="">Email</label>
+                                            <input type="text" class="form-control" name="email"
+                                                placeholder="Nhập email">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="">Khóa học bạn chọn</label>
+                                    <select name="course" id="course" class="form-control">
+                                        <option value="---">Lựa chọn khóa học</option>
+                                        <option value="Khóa học 1">Khóa học 1</option>
+                                        <option value="Khóa học 2">Khóa học 2</option>
+                                        <option value="Khóa học 3">Khóa học 3</option>
+                                        <option value="Khóa học 4">Khóa học 4</option>
+                                        <option value="Khóa học 5">Khóa học 5</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="">Ghi chú</label>
+                                    <textarea type="text" class="form-control" name="content"
+                                        placeholder="Bạn cần tư vấn điều gì?" rows="3"></textarea>
+                                </div>
+                                <p class="note">(*) Học viện Marsmarketing cam kết bảo mật thông tin của quý anh/chị</p>
+                                <button type="submit" class="btn-order">Gửi ngay <i
+                                        class="fas fa-paper-plane"></i></button>
+                            </form>
+                        </div>
+                    </div>
                     <div class="col-md-6">
                         <div class="wrap-left">
                             <div class="logo thumbnail">
@@ -729,124 +933,36 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-md-6">
-                        <div class="wrap-right">
-                            <form action="" class="form-order">
-                                <h3 class="title-form">Đăng ký khóa học</h3>
-                                <div class="form-group">
-                                    <label for="">Họ và tên</label>
-                                    <input type="text" class="form-control" name="fullname" placeholder="Nhập họ tên" required>
-                                </div>
-                                <div class="form-row">
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label for="">Số điện thoại</label>
-                                            <input type="text" class="form-control" name="numberphone" placeholder="Nhập số điện thoại" pattern="(\+84|0){1}(9|8|7|5|3){1}[0-9]{8}">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label for="">Email</label>
-                                            <input type="text" class="form-control" name="email" placeholder="Nhập email">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="">Khóa học bạn muốn đăng ký</label>
-                                    <select name="" id="" class="form-control">
-                                        <option value="">Lựa chọn khóa học</option>
-                                        <option value="">Khóa học 1</option>
-                                        <option value="">Khóa học 2</option>
-                                        <option value="">Khóa học 3</option>
-                                        <option value="">Khóa học 4</option>
-                                        <option value="">Khóa học 5</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label for="">Ghi chú</label>
-                                    <textarea type="text" class="form-control" name="content" placeholder="Bạn cần tư vấn điều gì?" rows="3"></textarea>
-                                </div>
-                                <p class="note">(*) Học viện Marsmarketing cam kết bảo mật thông tin của quý anh/chị</p>
-                                <button type="submit" class="btn-order">Gửi ngay <i
-                                        class="fas fa-paper-plane"></i></button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="block-faq" id="home-faq">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6">
-                        <span class="h-sub-title">
-                            <i class="fas fa-signal-alt-3"></i>
-                            FAQ
-                        </span>
-                        <h2 class="heading">
-                            Câu hỏi thường gặp
-                        </h2>
-                        <div class="sub-heading">
-                            Bạn sẽ tìm thấy giải pháp toàn diện cho tất cả các thắc mắc của mình liên quan đến các khóa học của chúng tôi
-                        </div>
-                        <img src="images/businessman.jpg" alt="">
-                    </div>
-                    <div class="col-md-6">
-                        <div class="list-faq">
-                            <div class="item-faq active">
-                                <div class="faq-name">What is Digital Marketing Mastery?</div>
-                                <span class="extend"></span>
-                                <div class="faq-content" style="display: block;">
-                                    Digital eadge is an online platform where you can find a variety of digital marketing course created by industry experts. Whether you're a begin ner looking to learn the basics or a seasoned marketer wanting to advance your skills, we have courses to
-                                    suit your needs.
-                                </div>
-                            </div>
-                            <div class="item-faq">
-                                <div class="faq-name">What is Digital Marketing Mastery?</div>
-                                <span class="extend"></span>
-                                <div class="faq-content">
-                                    Digital eadge is an online platform where you can find a variety of digital marketing course created by industry experts. Whether you're a begin ner looking to learn the basics or a seasoned marketer wanting to advance your skills, we have courses to
-                                    suit your needs.
-                                </div>
-                            </div>
-                            <div class="item-faq">
-                                <div class="faq-name">What is Digital Marketing Mastery?</div>
-                                <span class="extend"></span>
-                                <div class="faq-content">
-                                    Digital eadge is an online platform where you can find a variety of digital marketing course created by industry experts. Whether you're a begin ner looking to learn the basics or a seasoned marketer wanting to advance your skills, we have courses to
-                                    suit your needs.
-                                </div>
-                            </div>
-                            <div class="item-faq">
-                                <div class="faq-name">What is Digital Marketing Mastery?</div>
-                                <span class="extend"></span>
-                                <div class="faq-content">
-                                    Digital eadge is an online platform where you can find a variety of digital marketing course created by industry experts. Whether you're a begin ner looking to learn the basics or a seasoned marketer wanting to advance your skills, we have courses to
-                                    suit your needs.
-                                </div>
-                            </div>
-                            <div class="item-faq">
-                                <div class="faq-name">What is Digital Marketing Mastery?</div>
-                                <span class="extend"></span>
-                                <div class="faq-content">
-                                    Digital eadge is an online platform where you can find a variety of digital marketing course created by industry experts. Whether you're a begin ner looking to learn the basics or a seasoned marketer wanting to advance your skills, we have courses to
-                                    suit your needs.
-                                </div>
-                            </div>
-                            <div class="item-faq">
-                                <div class="faq-name">What is Digital Marketing Mastery?</div>
-                                <span class="extend"></span>
-                                <div class="faq-content">
-                                    Digital eadge is an online platform where you can find a variety of digital marketing course created by industry experts. Whether you're a begin ner looking to learn the basics or a seasoned marketer wanting to advance your skills, we have courses to
-                                    suit your needs.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
     </main>
+    <button class="scroll-to-top"><i class="fal fa-angle-double-up"></i></button>
+    <div class="cta-container">
+        <div class="cta-item cta-item-contact"></div>
+        <div class="list-cta">
+            <div class="cta-item cta-item-mess">
+                <span class="text">Facebook</span>
+                <a href="" class="icon">
+                    <i class="fab fa-facebook-messenger"></i>
+                </a>
+            </div>
+            <div class="cta-item cta-item-zalo">
+                <span class="text">Zalo</span>
+                <a href="" class="icon">
+                    <svg fill="none" height="20" viewBox="0 0 44 15" width="32" xmlns="http://www.w3.org/2000/svg">
+                        <path clip-rule="evenodd"
+                            d="M22.8982 4.42198V3.62126H25.3673V14.8825H23.9546C23.3731 14.8825 22.9013 14.4261 22.8982 13.8621C22.8978 13.8625 22.8974 13.8625 22.8971 13.8628C21.9027 14.5693 20.6734 14.989 19.3457 14.989C16.0204 14.989 13.3242 12.371 13.3242 9.14205C13.3242 5.91311 16.0204 3.29542 19.3457 3.29542C20.6734 3.29542 21.9027 3.7148 22.8971 4.4213C22.8974 4.42164 22.8978 4.42164 22.8982 4.42198ZM12.6845 0V0.364901C12.6845 1.04605 12.5907 1.6018 12.1355 2.25416L12.0805 2.31515C11.981 2.42479 11.7476 2.68211 11.6365 2.82156L3.71075 12.4875H12.6845V13.856C12.6845 14.423 12.2109 14.8825 11.6273 14.8825H0V14.2373C0 13.4469 0.202058 13.0946 0.457364 12.7273L8.90678 2.56596H0.352279V0H12.6845ZM28.3618 14.8825C27.8763 14.8825 27.4813 14.4991 27.4813 14.028V0H30.1239V14.8825H28.3618ZM37.9379 3.22483C41.2861 3.22483 44 5.8624 44 9.11088C44 12.3624 41.2861 15 37.9379 15C34.5893 15 31.8758 12.3624 31.8758 9.11088C31.8758 5.8624 34.5893 3.22483 37.9379 3.22483ZM19.3457 12.5821C21.3025 12.5821 22.8883 11.0423 22.8883 9.14205C22.8883 7.24491 21.3025 5.70479 19.3457 5.70479C17.389 5.70479 15.8028 7.24491 15.8028 9.14205C15.8028 11.0423 17.389 12.5821 19.3457 12.5821ZM37.9379 12.5762C39.9063 12.5762 41.5037 11.0251 41.5037 9.11088C41.5037 7.19969 39.9063 5.6486 37.9379 5.6486C35.9663 5.6486 34.3717 7.19969 34.3717 9.11088C34.3717 11.0251 35.9663 12.5762 37.9379 12.5762Z"
+                            fill="white" fill-rule="evenodd"></path>
+                    </svg>
+                </a>
+            </div>
+            <div class="cta-item cta-item-phone">
+                <span class="text">Gọi điện</span>
+                <a href="tel:" class="icon"><i class="fal fa-phone"></i></a>
+            </div>
+        </div>
+    </div>
     <footer class="footer">
         <div class="container">
             <div class="row">
@@ -864,7 +980,8 @@
                 <div class="col-md-6">
                     <form action="" class="form-email">
                         <label class="label-form">Gửi yêu cầu tư vấn miễn phí</label>
-                        <input type="text" name="numberphone" class="form-control" placeholder="Nhập sđt của bạn" pattern="(\+84|0){1}(9|8|7|5|3){1}[0-9]{8}">
+                        <input type="text" name="numberphone" class="form-control" placeholder="Nhập sđt của bạn"
+                            pattern="(\+84|0){1}(9|8|7|5|3){1}[0-9]{8}">
                         <button type="submit" class="btn-mail">Gửi <i class="fas fa-paper-plane"></i></button>
                     </form>
                 </div>
@@ -874,6 +991,91 @@
             </div>
         </div>
     </footer>
+    <!-- Modal -->
+    <div class="modal fade" id="modalRegister" data-backdrop="static" data-keyboard="false" tabindex="-1"
+        aria-labelledby="modalRegisterLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <div class="modal-body">
+                    <form action="" class="form-ggs">
+                        <h3 class="title-form">Đăng ký nhận tư vấn tại Marsmarketing</h3>
+                        <div class="form-row">
+                            <div class="col-md-6 form-group">
+                                <label for="">Họ và tên <span>(*)</span></label>
+                                <input type="text" class="form-control" name="fullname" placeholder="Nhập họ tên"
+                                    required>
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label for="">Số điện thoại <span>(*)</span></label>
+                                <input type="text" class="form-control" name="numberphone"
+                                    placeholder="Nhập số điện thoại" pattern="(\+84|0){1}(9|8|7|5|3){1}[0-9]{8}">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="">Email</label>
+                                <input type="text" class="form-control" name="email" placeholder="Nhập email">
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label for="">Khóa học bạn chọn</label>
+                                <select name="course" id="course" class="form-control">
+                                    <option value="---">Lựa chọn khóa học</option>
+                                    <option value="Khóa học 1">Khóa học 1</option>
+                                    <option value="Khóa học 2">Khóa học 2</option>
+                                    <option value="Khóa học 3">Khóa học 3</option>
+                                    <option value="Khóa học 4">Khóa học 4</option>
+                                    <option value="Khóa học 5">Khóa học 5</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="">Nội dung</label>
+                            <textarea name="content" class="form-control" placeholder="Nhập ghi chú của bạn"
+                                rows="3"></textarea>
+                        </div>
+                        <div class="action">
+                            <button type="submit" class="btn-sendform">Đăng ký</button>
+                        </div>
+                        <div class="note">
+                            <span>(*)</span> Mọi thông tin của bạn sẽ được Marsmarketing bảo mật, Marsmarketing sẽ không
+                            sử dụng thông tin cá nhân của khách hàng để gửi quảng cáo, giới thiệu dịch vụ và các thông
+                            tin có tính thương mại khác khi chưa được khách hàng chấp thuận.
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal Success -->
+    <div class="modal fade modal-alert-success" id="modal-alert-success" data-backdrop="static" data-keyboard="false"
+        tabindex="-1" aria-labelledby="modal-alert-successLabel" aria-modal="true" role="dialog">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="f-modal-icon f-modal-success animate">
+                        <span class="f-modal-line f-modal-tip animateSuccessTip"></span>
+                        <span class="f-modal-line f-modal-long animateSuccessLong"></span>
+                        <div class="f-modal-placeholder"></div>
+                        <div class="f-modal-fix"></div>
+                    </div>
+                </div>
+
+                <div class="alert-heading text-center">
+                    Gửi thành công
+                </div>
+                <p class="text-center alert-message">
+                    Chúng tôi sẽ kết nối với bạn trong thời gian sớm.
+                </p>
+                <div class="modal-footer">
+                    <button type="button" class="btn-signin" data-dismiss="modal">Ok</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Modal Success -->
     <script type="text/javascript" src="assets/jquery.min.js"></script>
     <script type="text/javascript" src="assets/slick-1.6.0/slick.min.js"></script>
     <!--build:js js/main.min.js -->

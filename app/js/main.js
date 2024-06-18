@@ -53,7 +53,7 @@ var actionClick = {
             $(this).parent().addClass('active');
             var targetId = $(this).attr('href');
             var targetElement = $('#' + targetId);
-            var targetDistance = 110;
+            var targetDistance = 80;
             if (targetElement.length > 0) {
                 var getOffset = targetElement.offset().top;
                 $('html,body').animate({
@@ -68,13 +68,20 @@ var scrollFixed = {
     init: function () {
         var header = $('#header');
         var headerOffset = header.offset().top;
-
-        $(window).scroll(function () {
-            if ($(window).scrollTop() > headerOffset) {
+        $(window).on('load', function () {
+            if (headerOffset > 0) {
                 header.addClass('fixed-header');
-            } else {
+                $('.scroll-to-top').addClass('fixed');
+            }
+        })
+        $(window).scroll(function () {
+            if ($(window).scrollTop() > 0) {
+                header.addClass('fixed-header');
+                $('.scroll-to-top').addClass('fixed');
+            } else if ($(window).scrollTop() == 0) {
                 $('.menu-item').removeClass('active');
                 header.removeClass('fixed-header');
+                $('.scroll-to-top').removeClass('fixed');
             }
         });
     }
@@ -93,9 +100,96 @@ var faq = {
         })
     }
 }
+var scrollToTop = {
+    init: function () {
+        $('.scroll-to-top').click(function () {
+            $('html, body').animate({ scrollTop: 0 }, 600);
+            return false;
+        })
+    }
+}
+var buttonCta = {
+    init: function () {
+        $('body').on('click', '.cta-item-contact', function () {
+            $(this).toggleClass('closes');
+            $('.overlay').toggleClass('show');
+            $(this).next().toggleClass('show');
+        })
+        $('body').on('click', '.overlay', function () {
+            $(this).removeClass('show');
+            $('.cta-item-contact').removeClass('closes');
+            $('.cta-container .list-cta').removeClass('show');
+        })
+    }
+}
+var formRegister = {
+    init: function () {
+        var formGoogle = $('form.form-ggs');
+        if (formGoogle.length > 0) {
+            formGoogle.on('submit', function () {
+                var container = $(this);
+                formRegister.sendForm(container);
+                return false;
+            })
+        }
+    },
+    sendForm: function (container) {
+        var fullname = $(container).find('input[name="fullname"]').val();
+        var numberphone = $(container).find('input[name="numberphone"]').val();
+        var email = $(container).find('input[name="email"]').val();
+        var content = $(container).find('textarea[name="content"]').val();
+        var course = $(container).find('#course').val();
+        if (course == "") {
+            course = 'Tư vấn';
+        }
+        if (fullname != "" && numberphone != "") {
+            $.ajax({
+                url: "https://docs.google.com/forms/u/0/d/e/1FAIpQLSfb6x86KH3NfM35Fwew_WQi9EOCKX9Um9U7FunbgcP1ta-q2A/formResponse",
+                type: "POST",
+                dataType: "xml",
+                data: {
+                    "entry.1348345172": fullname,
+                    "entry.519821471": numberphone,
+                    "entry.1168685713": email,
+                    "entry.1727228810": course,
+                    "entry.1624929131": content,
+                },
+                statusCode: {
+                    0: function () {
+                        $('#modalRegister').modal('hide');
+                        setTimeout(function () {
+                            $('#modal-alert-success').modal('show');
+                        }, 1000);
+                        setTimeout(function () {
+                            $('#modal-alert-success').modal('hide');
+                        }, 3000);
+                        $(container).closest('form').find("input[type=text],input[type=email], textarea").val("");
+                        $(container).find('button').attr('disabled', 'disabled');
+                    },
+                    200: function () {
+                        $('#modalRegister').modal('hide');
+                        setTimeout(function () {
+                            $('#modal-alert-success').modal('show');
+                        }, 1000);
+                        setTimeout(function () {
+                            $('#modal-alert-success').modal('hide');
+                        }, 3000);
+                        $(container).closest('form').find("input[type=text],input[type=email], textarea").val("");
+                        $(container).find('button').attr('disabled', 'disabled');
+                    },
+                }
+            });
+        } else {
+            alert("Kiểm tra lại các trường thông tin vừa nhập!");
+        }
+    }
+}
 jQuery(document).ready(function () {
     faq.init();
     slider.init();
     actionClick.init();
     scrollFixed.init();
+    scrollToTop.init();
+    buttonCta.init();
+    formRegister.init();
 });

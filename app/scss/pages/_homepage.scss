@@ -3,11 +3,14 @@
     font-size: 18px;
     font-weight: 500;
     padding: 5px 25px;
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
     border-radius: 20px;
     margin-bottom: 20px;
     font-family: "Barlow Condensed", sans-serif;
     color: $dark;
+
     i {
         color: $brand;
     }
@@ -19,13 +22,18 @@
     text-transform: uppercase;
     font-family: "Barlow Condensed", sans-serif;
     margin-bottom: 20px;
+
     &-center {
         text-align: center;
+    }
+
+    span {
+        color: $brand;
     }
 }
 
 .sub-heading {
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .main-page {
@@ -33,18 +41,22 @@
 }
 
 .block-feedback {
-    background: $dark;
-    padding: 50px 0 20px;
+    background: #222 url(../images/bg-footer.png);
+    background-repeat: repeat-x;
+    padding: 70px 0 40px;
+
     .heading {
         color: $light;
     }
+
     .sub-heading {
-        max-width: 70%;
+        max-width: 60%;
         text-align: center;
         margin: 0 auto;
         color: $light;
         margin-bottom: 40px;
     }
+
     .inner {
         background: $light;
         border-radius: 8px;
@@ -52,6 +64,7 @@
         font-size: 18px;
         font-weight: 500;
         margin-bottom: 30px;
+
         i {
             color: $brand;
             font-size: 22px;
@@ -61,56 +74,69 @@
 
 .meta-people {
     display: flex;
+
     .avatar {
         width: 50px;
         height: 50px;
         border-radius: 50px;
         margin-right: 10px;
     }
+
     .name {
         font-weight: 700;
     }
+
     .job-title {
         font-size: 14px;
     }
 }
 
 .block-faq {
-    margin: 50px 0;
+    margin-top: 70px;
+
     .sub-heading {
         margin-bottom: 30px;
     }
+
     .item-faq {
         padding: 20px;
         position: relative;
+
         &:not(:first-child) {
             border-top: 1px solid $gray;
         }
+
         &.active {
             background: $gray;
             border-radius: 8px;
             border-bottom: 0;
+
             .extend {
                 &::after {
                     content: "\f056";
                 }
             }
+
             .faq-name {
                 margin-bottom: 15px;
             }
+
             &+.item-faq {
                 border-top: 0;
             }
         }
     }
+
     .faq-name {
         font-size: 20px;
         font-weight: 700;
     }
+
     .extend {
         position: absolute;
         right: 20px;
         top: 20px;
+
         &::after {
             content: "\f055";
             font-family: Font Awesome\ 5 Pro;
@@ -118,16 +144,19 @@
             cursor: pointer;
         }
     }
+
     .faq-content {
         display: none;
     }
 }
 
 .block-expert {
-    margin-top: 50px;
+    margin-top: 70px;
+
     .list-image-experts {
         .item {
             position: relative;
+
             &::before {
                 content: "";
                 width: 400px;
@@ -141,26 +170,32 @@
                 z-index: -1;
                 opacity: 0.05;
             }
+
             img {
                 margin: 0 auto;
             }
         }
     }
+
     .apostrophe {
         font-size: 40px;
         color: $brand;
     }
+
     .meta-people {
         margin-top: 20px;
     }
+
     .slick-prev,
     .slick-next {
         transform: none;
     }
+
     .slick-prev {
         top: 100%;
         left: 80%;
     }
+
     .slick-next {
         top: 100%;
         right: 6%;
@@ -168,84 +203,120 @@
 }
 
 .block-form {
-    padding: 50px 0;
-    background: $gray;
+    padding: 70px 0;
+
+    .heading {
+        margin-bottom: 30px;
+    }
+
     .wrap-left {
         background: $dark;
         height: 100%;
         padding: 50px 50px 50px 70px;
         color: $light;
         border-bottom-right-radius: 60px;
+
         .logo {
             width: 100px;
             height: 114px;
             margin-bottom: 25px;
         }
+
         a {
             color: $light;
         }
     }
+
     .slogan {
         font-size: 24px;
         font-weight: 700;
         margin-bottom: 20px;
     }
+
     .sub-slogan {
         margin-bottom: 15px;
     }
+
     .info {
         list-style: none;
         padding-left: 0;
         margin-bottom: 0;
     }
+
     .item {
         &:not(:last-child) {
             margin-bottom: 10px;
         }
+
         i {
             width: 20px;
             margin-right: 5px;
         }
+
         span {
             font-weight: 700;
         }
     }
-    .title-form {
-        font-size: 24px;
-        font-weight: 700;
-        margin-bottom: 15px;
-        text-transform: uppercase;
-        font-family: "Barlow Condensed", sans-serif;
+
+    select.form-control,
+    input.form-control {
+        height: 42px;
     }
-    label {
-        font-weight: 700;
-        font-size: 15px;
-    }
-     ::placeholder {
-        font-size: 15px;
-    }
-    .note {
-        font-size: 14px;
-        font-style: italic;
+
+    .form-order {
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+        padding: 40px 20px;
     }
 }
 
+.title-form {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    font-family: "Barlow Condensed", sans-serif;
+}
+
+label {
+    font-weight: 700;
+    font-size: 15px;
+
+    span {
+        color: #db0000;
+        font-weight: 400;
+    }
+}
+
+::placeholder {
+    font-size: 15px;
+}
+
+.note {
+    font-size: 14px;
+    font-style: italic;
+}
+
 .block-why-choose {
-    margin-top: 50px;
+    margin-top: 70px;
+
     .heading {
         margin-bottom: 40px;
     }
+
     .list-content {
         list-style: none;
         padding-left: 0;
         margin-bottom: 0;
+
         .item {
             position: relative;
             padding-left: 95px;
+
             &:not(:last-child) {
                 margin-bottom: 15px;
             }
         }
+
         .icon {
             width: 50px;
             height: 50px;
@@ -254,15 +325,18 @@
             top: 20px;
         }
     }
+
     .title {
         font-size: 22px;
         font-weight: 600;
         font-family: Barlow Condensed, sans-serif;
     }
+
     .item {
         background: #fff2f2;
         padding: 15px 30px;
         border-radius: 8px;
+
         .text {
             margin-bottom: 0;
         }
@@ -274,20 +348,24 @@
     background-size: cover;
     height: 90vh;
     position: relative;
+
     .banner-wrapper {
         height: 90vh;
     }
+
     .banner-content {
         display: flex;
         flex-direction: column;
         justify-content: center;
     }
+
     .heading-slider {
         font-size: 70px;
         font-family: "Barlow Condensed", sans-serif;
         font-weight: 700;
         margin-bottom: 35px;
     }
+
     .banner-logo {
         background: url(../images/home-banner.png);
         background-position: center;
@@ -295,52 +373,65 @@
         background-size: 70%;
         position: relative;
     }
+
     .banner-action {
         margin-bottom: 35px;
     }
+
     .quantity-user {
         font-size: 35px;
         font-weight: 700;
         font-family: "Barlow Condensed", sans-serif;
     }
+
     .total-user {
         position: relative;
     }
+
     .text-banner {
         font-size: 18px;
     }
+
     .icon {
         font-size: 20px;
         position: absolute;
         left: 0;
         top: 10px;
     }
+
     .total-mobile {
         padding-left: 30px;
     }
+
     .total-register {
         margin-left: 15px;
+
         .total-mobile {
             padding-left: 35px;
         }
     }
+
     .banner-logo-item {
         width: fit-content;
+
         &:first-child {
             left: 0;
             position: absolute;
             top: 18%;
         }
+
         &:nth-child(2n) {
             position: absolute;
             right: -5%;
             top: 45%;
         }
+
         &:last-child {
             bottom: 20%;
             left: 5%;
             position: absolute;
         }
+
         .item {
             background: $light;
             padding: 16px 20px 16px 16px;
@@ -351,20 +442,30 @@
             transition: all .5s;
             font-family: "Barlow Condensed", sans-serif;
         }
+
         .web {
             font-size: 20px;
             font-weight: 500;
             line-height: 1.3;
         }
+
         .img-logo {
             width: 45px;
             margin-right: 10px;
         }
     }
+
+    .btn-signin {
+        margin-left: 20px;
+        padding: 10px 32px;
+        font-size: 22px;
+        border-radius: 30px;
+    }
 }
 
 .block-about {
-    margin-top: 50px;
+    margin-top: 70px;
+
     .core-title {
         font-weight: 700;
         font-family: Barlow Condensed, sans-serif;
@@ -372,9 +473,11 @@
         font-size: 28px;
         color: $dark;
     }
+
     .core-item {
         align-items: center;
         padding: 20px 0;
+
         .text-content {
             background: $light;
             box-shadow: 0 3px 15px rgba(203, 139, 137, 0.1);
@@ -383,34 +486,45 @@
             position: relative;
             z-index: 2;
         }
+
         .order-md-1.order-2 {
             .text-content {
                 margin-right: -70px;
             }
         }
+
         .order-md-2.order-2 {
             .text-content {
                 margin-left: -70px;
+            }
+        }
+
+        .inner {
+            p {
+                margin-bottom: 0;
             }
         }
     }
 }
 
 .block-course {
-    margin-top: 50px;
+    margin-top: 80px;
     margin-bottom: 120px;
+
     &-left {
         .course {
             .thumbnail {
                 border-radius: 10px;
                 margin-bottom: 15px;
             }
+
             &-title {
                 font-size: 24px;
                 font-weight: 600;
                 font-family: Barlow Condensed, sans-serif;
                 margin-bottom: 0;
             }
+
             &-meta {
                 .meta {
                     list-style: none;
@@ -419,27 +533,32 @@
                     display: flex;
                     justify-content: space-between;
                 }
+
                 .item {
                     position: relative;
                     padding-left: 25px;
+
                     &::before {
                         font-family: Font Awesome\ 5 Pro;
                         position: absolute;
                         top: 0;
                         left: 0;
                     }
+
                     &:nth-child(1) {
                         &::before {
                             content: "\f5ff";
                             color: #6400ff;
                         }
                     }
+
                     &:nth-child(2) {
                         &::before {
                             content: "\f573";
                             color: #ff0000;
                         }
                     }
+
                     &:nth-child(3) {
                         &::before {
                             content: "\f017";
@@ -447,6 +566,7 @@
                         }
                     }
                 }
+
                 .text {
                     font-size: 14px;
                     font-weight: 600;
@@ -454,6 +574,7 @@
             }
         }
     }
+
     .price-review {
         margin-top: 15px;
         margin-bottom: 15px;
@@ -462,34 +583,41 @@
         justify-content: space-between;
         border-bottom: 1px solid #ededed;
     }
+
     .review {
         display: flex;
         align-items: center;
+
         &-star {
             list-style: none;
             padding-left: 0;
             margin-bottom: 0;
             margin-right: 15px;
+
             li {
                 display: inline-block;
                 color: #fb6f30;
             }
         }
+
         .number {
             font-size: 14px;
             font-weight: 500;
             color: #a5a5a5;
         }
     }
+
     .price {
         font-size: 22px;
         font-weight: 600;
         color: #d0021c;
         font-family: Barlow Condensed, sans-serif;
     }
+
     .heading {
         margin-bottom: 30px;
     }
+
     .course-info {
         i {
             color: $brand;
@@ -497,19 +625,29 @@
             margin-right: 5px;
             text-align: center;
         }
+
         span {
             font-size: 17px;
             font-weight: 600;
             font-family: "Barlow Condensed", sans-serif;
         }
+
         p {
             margin-bottom: 0px;
             padding: 8px 0;
+
             &:nth-child(2n + 1) {
-                background: #00000003;
+                background: #9aa0a60d;
+            }
+        }
+
+        .content {
+            p {
+                background: transparent;
             }
         }
     }
+
     &-right {
         .title {
             font-size: 22px;
@@ -519,17 +657,20 @@
             margin-bottom: 15px;
         }
     }
+
     .tuition {
         &-title {
             margin-bottom: 10px;
         }
     }
+
     .content-title {
         font-weight: 600;
         font-family: "Barlow Condensed", sans-serif;
         font-size: 17px;
         margin-bottom: 10px;
         position: relative;
+
         &::after {
             content: "";
             width: 82px;
@@ -540,12 +681,14 @@
             bottom: -3px;
         }
     }
+
     .content {
         p {
             padding: 0;
             margin-bottom: 10px;
         }
     }
+
     .slick-dots {
         bottom: -45px;
     }
@@ -553,74 +696,201 @@
 
 .block-schedule {
     margin-bottom: 50px;
+
     .schedule-head {
         display: flex;
         border: 1px solid #9aa0a633;
         border-radius: 8px;
         margin-bottom: 10px;
         background: #9aa0a60d;
+
         .item {
             padding: 9px 12px;
             color: #80868b;
             display: flex;
             gap: 4px;
             align-items: center;
+
             &:not(:last-child) {
                 border-right: 1px solid #9aa0a633;
             }
+
+            &:not(:first-child) {
+                justify-content: center;
+            }
         }
     }
+
     .schedule-head,
     .schedule-container {
         display: flex;
+        align-items: center;
+
         .item {
             &:nth-child(1) {
                 flex: 1 1 0%;
             }
+
             &:nth-child(2) {
                 width: 200px;
+                text-align: center;
             }
+
             &:nth-child(3) {
                 width: 140px;
+                text-align: center;
             }
+
             &:nth-child(4) {
                 width: 180px;
+                text-align: center;
             }
+
             &:nth-child(5) {
                 width: 240px;
+                text-align: center;
             }
+
             &:nth-child(6) {
                 width: 160px;
+                text-align: center;
             }
         }
     }
+
     .schedule-container {
         padding-top: 12px;
         padding-bottom: 12px;
+
         &:nth-child(2n) {
             background: #9aa0a60d;
         }
+
         .item {
             padding-left: 10px;
             padding-right: 10px;
         }
     }
+
     .item-method {
-        color: #ff8633;
-        background: #ff771a1a;
+
         padding: 2px 8px 2px 25px;
         display: inline-block;
         border-radius: 20px;
         position: relative;
+
         &::before {
             content: "";
-            background: #ff8633;
+
             width: 10px;
             height: 10px;
             border-radius: 10px;
             position: absolute;
             left: 8px;
             top: 10px;
+        }
+
+        &-orange {
+            color: #ff8633;
+            background: #ff771a1a;
+
+            &::before {
+                background: #ff8633;
+            }
+        }
+
+        &-blue {
+            color: #007dff;
+            background: #007dff26;
+
+            &::before {
+                background: #007dff;
+            }
+        }
+    }
+
+    .btn-signin {
+        padding: 6px 25px;
+        font-size: 16px;
+        border-radius: 20px;
+    }
+}
+
+.cta-container {
+    .cta-item {
+        width: 50px;
+        height: 50px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50px;
+        color: $light;
+        cursor: pointer;
+        font-size: 20px;
+        position: relative;
+        z-index: 6;
+
+        a {
+            color: $light;
+        }
+
+        &-contact {
+            background: #db0000;
+            position: fixed;
+            left: 15px;
+            bottom: 30px;
+
+            &::before {
+                content: "\f4b0";
+                font-family: Font Awesome\ 5 Pro;
+            }
+
+            &.closes {
+                &::before {
+                    content: "\f00d";
+                }
+            }
+        }
+
+        &-phone {
+            background: #fc8800;
+        }
+
+        &-zalo {
+            background: #0068ff;
+        }
+
+        &-mess {
+            background: linear-gradient(220.97deg, #ff666d 8.67%, #9539fe 52.12%, #0191ff 87.37%);
+        }
+    }
+
+    .text {
+        position: absolute;
+        left: calc(100% + 10px);
+        width: 70px;
+        font-size: 14px;
+    }
+
+    .list-cta {
+        display: inline-flex;
+        flex-direction: column;
+        position: fixed;
+        left: 15px;
+        bottom: 130px;
+        z-index: 6;
+        transition: all 0.3s;
+        opacity: 0;
+        visibility: hidden;
+
+        &.show {
+            bottom: 90px;
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .cta-item {
+            margin-bottom: 10px;
         }
     }
 }
