@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MarsMarketing</title>
+    <link rel="icon" href="images/logo/logo-r.png" sizes="32x32" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -25,6 +26,20 @@
         <div class="primary-nav">
             <div class="container d-flex align-items-center">
                 <button class="toggle-menu"><span></span></button>
+                <ul class="main-menu navbar-nav main-menu-mb">
+                    <li class="menu-item">
+                        <a href="home-about" class="scrollTo menu-link">Giới thiệu</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="home-schedule" class="scrollTo menu-link">Lịch khai giảng</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="home-feedback" class="scrollTo menu-link">Học viên</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="home-course" class="scrollTo menu-link">Khóa học</a>
+                    </li>
+                </ul>
                 <ul class="main-menu navbar-nav main-menu-left">
                     <li class="menu-item">
                         <a href="home-about" class="scrollTo menu-link">Giới thiệu</a>
@@ -307,7 +322,7 @@
                     <span>Marsmaketing</span> - lựa chọn xứng đáng
                 </h2>
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-6 order-2 order-md-1 mt-3 mt-lg-0">
                         <ul class="list-content">
                             <li class="item">
                                 <span class="icon thumbnail">
@@ -355,7 +370,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="col-md-6 text-center">
+                    <div class="col-md-6 text-center order-1 order-md-2">
                         <img src="images/thumb/uuthe.png" alt="">
                     </div>
                 </div>
@@ -578,70 +593,76 @@
                     </span>
                 </div>
                 <h2 class="heading heading-center">Lịch khai giảng</h2>
-                <div class="schedule-head">
-                    <div class="item"><i class="fal fa-clipboard-list-check"></i> Khoá học</div>
-                    <div class="item"><i class="fal fa-calendar-alt"></i> Khai giảng</div>
-                    <div class="item"><i class="fal fa-calendar-check"></i> Số buổi</div>
-                    <div class="item"><i class="far fa-map-marker-alt"></i> Địa điểm</div>
-                    <div class="item"><i class="fal fa-check-circle"></i> Hình thức</div>
-                    <div class="item"></div>
-                </div>
-                <div class="schedule-body">
-                    <div class="schedule-container">
-                        <div class="item">Lịch sinh hoạt khoá học A</div>
-                        <div class="item">18/06/2024</div>
-                        <div class="item">Thứ 3, 4</div>
-                        <div class="item">Tố Hữu, Hà Nội</div>
-                        <div class="item">
-                            <div class="item-method item-method-orange">Học tại lớp</div>
-                        </div>
-                        <div class="item"><button class="btn-signin" data-toggle="modal"
-                                data-target="#modalRegister">Đăng ký</button></div>
-                    </div>
-                    <div class="schedule-container">
-                        <div class="item">Lịch sinh hoạt khoá học A</div>
-                        <div class="item">18/06/2024</div>
-                        <div class="item">Thứ 3, 4</div>
-                        <div class="item">Tố Hữu, Hà Nội</div>
-                        <div class="item">
-                            <div class="item-method item-method-blue">Học Online</div>
-                        </div>
-                        <div class="item"><button class="btn-signin" data-toggle="modal"
-                                data-target="#modalRegister">Đăng ký</button></div>
-                    </div>
-                    <div class="schedule-container">
-                        <div class="item">Lịch sinh hoạt khoá học A</div>
-                        <div class="item">18/06/2024</div>
-                        <div class="item">Thứ 3, 4</div>
-                        <div class="item">Tố Hữu, Hà Nội</div>
-                        <div class="item">
-                            <div class="item-method item-method-orange">Học tại lớp</div>
-                        </div>
-                        <div class="item"><button class="btn-signin" data-toggle="modal"
-                                data-target="#modalRegister">Đăng ký</button></div>
-                    </div>
-                    <div class="schedule-container">
-                        <div class="item">Lịch sinh hoạt khoá học A</div>
-                        <div class="item">18/06/2024</div>
-                        <div class="item">Thứ 3, 4</div>
-                        <div class="item">Tố Hữu, Hà Nội</div>
-                        <div class="item">
-                            <div class="item-method item-method-blue">Học Online</div>
-                        </div>
-                        <div class="item"><button class="btn-signin" data-toggle="modal"
-                                data-target="#modalRegister">Đăng ký</button></div>
-                    </div>
-                    <div class="schedule-container">
-                        <div class="item">Lịch sinh hoạt khoá học A</div>
-                        <div class="item">18/06/2024</div>
-                        <div class="item">Thứ 3, 4</div>
-                        <div class="item">Tố Hữu, Hà Nội</div>
-                        <div class="item">
-                            <div class="item-method item-method-orange">Học tại lớp</div>
-                        </div>
-                        <div class="item"><button class="btn-signin" data-toggle="modal"
-                                data-target="#modalRegister">Đăng ký</button></div>
-                    </div>
+                <div class="block-schedule-container">
+                    <table class="block-schedule-table">
+                        <thead class="schedule-head">
+                            <tr class="item">
+                                <th><i class="fal fa-clipboard-list-check"></i> Khoá học</th>
+                                <th><i class="fal fa-calendar-alt"></i> Khai giảng</th>
+                                <th><i class="fal fa-calendar-check"></i> Số buổi</th>
+                                <th><i class="far fa-map-marker-alt"></i> Địa điểm</th>
+                                <th><i class="fal fa-check-circle"></i> Hình thức</th>
+                                <th><i class="fal fa-loveseat"></i> Giữ chỗ</th>
+                            </tr>
+                        </thead>
+                        <tbody class="schedule-body">
+                            <tr class="item">
+                                <td>Lịch sinh hoạt khoá học A</td>
+                                <td>18/06/2024</td>
+                                <td>Thứ 3, 4</td>
+                                <td>Tố Hữu, Hà Nội</td>
+                                <td>
+                                    <div class="item-method item-method-orange">Học tại lớp</div>
+                                </td>
+                                <td><button class="btn-signin" data-toggle="modal" data-target="#modalRegister">Đăng
+                                        ký</button></td>
+                            </tr>
+                            <tr class="item">
+                                <td>Lịch sinh hoạt khoá học A</td>
+                                <td>18/06/2024</td>
+                                <td>Thứ 3, 4</td>
+                                <td>Tố Hữu, Hà Nội</td>
+                                <td>
+                                    <div class="item-method item-method-blue">Học tại lớp</div>
+                                </td>
+                                <td><button class="btn-signin" data-toggle="modal" data-target="#modalRegister">Đăng
+                                        ký</button></td>
+                            </tr>
+                            <tr class="item">
+                                <td>Lịch sinh hoạt khoá học A</td>
+                                <td>18/06/2024</td>
+                                <td>Thứ 3, 4</td>
+                                <td>Tố Hữu, Hà Nội</td>
+                                <td>
+                                    <div class="item-method item-method-orange">Học tại lớp</div>
+                                </td>
+                                <td><button class="btn-signin" data-toggle="modal" data-target="#modalRegister">Đăng
+                                        ký</button></td>
+                            </tr>
+                            <tr class="item">
+                                <td>Lịch sinh hoạt khoá học A</td>
+                                <td>18/06/2024</td>
+                                <td>Thứ 3, 4</td>
+                                <td>Tố Hữu, Hà Nội</td>
+                                <td>
+                                    <div class="item-method item-method-orange">Học tại lớp</div>
+                                </td>
+                                <td><button class="btn-signin" data-toggle="modal" data-target="#modalRegister">Đăng
+                                        ký</button></td>
+                            </tr>
+                            <tr class="item">
+                                <td>Lịch sinh hoạt khoá học A</td>
+                                <td>18/06/2024</td>
+                                <td>Thứ 3, 4</td>
+                                <td>Tố Hữu, Hà Nội</td>
+                                <td>
+                                    <div class="item-method item-method-orange">Học tại lớp</div>
+                                </td>
+                                <td><button class="btn-signin" data-toggle="modal" data-target="#modalRegister">Đăng
+                                        ký</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>

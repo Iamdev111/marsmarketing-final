@@ -1,87 +1,117 @@
 .header {
     font-family: "Barlow Condensed", sans-serif;
+}
 
-    .toggle-menu {
-        display: none;
-        outline: none;
-        background: transparent;
-        border: none;
-        padding: 0;
+.main-menu {
 
-        span {
-            width: 30px;
-            height: 2px;
-            background: $dark;
-            display: block;
+    &>li {
+        position: relative;
+
+        &>a {
+            padding: 8px 20px;
+            font-size: 18px;
+            font-weight: 600;
+            color: $dark;
+            text-transform: uppercase;
             position: relative;
 
-            &::before,
-            &::after {
-                content: "";
-                width: 100%;
-                height: 2px;
-                background: $dark;
-                position: absolute;
-                left: 0;
-            }
-
             &::before {
-                top: 10px;
+                content: "";
+                width: 0;
+                height: 2px;
+                background: $brand;
+                position: absolute;
+                bottom: -10px;
+                left: 0;
+                transition: all .3s;
+                z-index: 1;
             }
+        }
 
-            &::after {
-                bottom: 10px;
+        &:hover {
+
+            &>a {
+                color: $brand;
+
+                &::before {
+                    left: 20px;
+                    width: calc(100% - 40px);
+                }
+            }
+        }
+
+        &.active {
+            &>a {
+                color: $brand;
+
+                &::before {
+                    left: 20px;
+                    width: calc(100% - 40px);
+                }
             }
         }
     }
+}
 
+.toggle-menu {
+    display: none;
+    outline: none;
+    background: transparent;
+    border: none;
+    padding: 0;
+
+    span {
+        width: 30px;
+        height: 2px;
+        background: $dark;
+        display: block;
+        position: relative;
+
+        &::before,
+        &::after {
+            content: "";
+            width: 100%;
+            height: 2px;
+            background: $dark;
+            position: absolute;
+            left: 0;
+        }
+
+        &::before {
+            top: 10px;
+        }
+
+        &::after {
+            bottom: 10px;
+        }
+    }
+}
+
+@media screen and(max-width:575px) {
     .main-menu {
-
         &>li {
-            position: relative;
-
             &>a {
-                padding: 8px 20px;
-                font-size: 18px;
-                font-weight: 600;
-                color: $dark;
-                text-transform: uppercase;
-                position: relative;
-
-                &::before {
-                    content: "";
-                    width: 0;
-                    height: 2px;
-                    background: $brand;
-                    position: absolute;
-                    bottom: -10px;
-                    left: 0;
-                    transition: all .3s;
-                    z-index: 1;
-                }
+                display: block;
             }
+        }
 
-            &:hover {
+        &-left,
+        &-right {
+            display: none;
+        }
 
-                &>a {
-                    color: $brand;
-
-                    &::before {
-                        left: 20px;
-                        width: calc(100% - 40px);
-                    }
-                }
-            }
+        &-mb {
+            position: absolute;
+            top: 70px;
+            width: 100%;
+            background: $light;
+            height: 100vh;
+            left: -100%;
+            transition: all 0.3s;
 
             &.active {
-                &>a {
-                    color: $brand;
-
-                    &::before {
-                        left: 20px;
-                        width: calc(100% - 40px);
-                    }
-                }
+                left: 0;
+                border-top: 1px solid #d7d7d7;
             }
         }
     }

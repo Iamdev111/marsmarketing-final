@@ -333,9 +333,9 @@ label {
     }
 
     .item {
-        background: #fff2f2;
+        // background: #fff2f2;
         padding: 15px 30px;
-        border-radius: 8px;
+        // border-radius: 8px;
 
         .text {
             margin-bottom: 0;
@@ -346,7 +346,6 @@ label {
 .block-banner {
     background: url(../images/banner-homepage.png) no-repeat top;
     background-size: cover;
-    height: 90vh;
     position: relative;
 
     .banner-wrapper {
@@ -413,15 +412,14 @@ label {
 
     .banner-logo-item {
         width: fit-content;
+        position: absolute;
 
         &:first-child {
             left: 0;
-            position: absolute;
             top: 18%;
         }
 
-        &:nth-child(2n) {
-            position: absolute;
+        &:nth-child(2) {
             right: -5%;
             top: 45%;
         }
@@ -429,7 +427,6 @@ label {
         &:last-child {
             bottom: 20%;
             left: 5%;
-            position: absolute;
         }
 
         .item {
@@ -480,7 +477,7 @@ label {
 
         .text-content {
             background: $light;
-            box-shadow: 0 3px 15px rgba(203, 139, 137, 0.1);
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
             padding: 30px 50px;
             border-radius: 8px;
             position: relative;
@@ -697,83 +694,55 @@ label {
 .block-schedule {
     margin-bottom: 50px;
 
+    &-table {
+        width: 100%;
+    }
+
     .schedule-head {
-        display: flex;
+        background: #9aa0a60d;
         border: 1px solid #9aa0a633;
         border-radius: 8px;
-        margin-bottom: 10px;
-        background: #9aa0a60d;
 
-        .item {
-            padding: 9px 12px;
+
+        th {
+            padding: 10px 12px;
+            font-weight: normal;
             color: #80868b;
-            display: flex;
-            gap: 4px;
-            align-items: center;
 
             &:not(:last-child) {
                 border-right: 1px solid #9aa0a633;
             }
 
             &:not(:first-child) {
-                justify-content: center;
+                text-align: center;
+            }
+
+            i {
+                margin-right: 4px;
             }
         }
     }
 
-    .schedule-head,
-    .schedule-container {
-        display: flex;
-        align-items: center;
-
-        .item {
-            &:nth-child(1) {
-                flex: 1 1 0%;
-            }
-
-            &:nth-child(2) {
-                width: 200px;
-                text-align: center;
-            }
-
-            &:nth-child(3) {
-                width: 140px;
-                text-align: center;
-            }
-
-            &:nth-child(4) {
-                width: 180px;
-                text-align: center;
-            }
-
-            &:nth-child(5) {
-                width: 240px;
-                text-align: center;
-            }
-
-            &:nth-child(6) {
-                width: 160px;
-                text-align: center;
-            }
-        }
-    }
-
-    .schedule-container {
-        padding-top: 12px;
-        padding-bottom: 12px;
-
-        &:nth-child(2n) {
-            background: #9aa0a60d;
+    .schedule-body {
+        td {
+            padding: 8px 12px;
         }
 
         .item {
-            padding-left: 10px;
-            padding-right: 10px;
+            &:nth-child(2n) {
+                background: #9aa0a60d;
+                border-radius: 5px;
+            }
+        }
+
+        td {
+            &:not(:first-child) {
+                text-align: center;
+            }
         }
     }
 
     .item-method {
-
         padding: 2px 8px 2px 25px;
         display: inline-block;
         border-radius: 20px;
@@ -781,7 +750,6 @@ label {
 
         &::before {
             content: "";
-
             width: 10px;
             height: 10px;
             border-radius: 10px;

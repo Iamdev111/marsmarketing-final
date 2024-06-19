@@ -7,9 +7,7 @@
     .container-xl {
         max-width: 1400px;
     }
-}
 
-@media (min-width:1920px) {
     .block-banner {
         .container-banner {
             padding-left: 120px;
@@ -32,6 +30,10 @@
             &-right {
                 margin-left: auto;
             }
+
+            &-mb {
+                display: none;
+            }
         }
     }
 
@@ -39,11 +41,174 @@
 }
 
 @media (max-width:575px) {
+    .heading {
+        font-size: 35px;
+    }
 
-    /* --- Menu --- */
     .toggle-menu {
         display: block;
     }
 
-    /* --- End Menu --- */
+    .brand-logo {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* --- Header ---*/
+
+    .logo-header {
+        width: 50px;
+        height: 57px;
+    }
+
+    /* --- End Header --- */
+
+    /* --- Main --- */
+    .main-page {
+        margin-top: 75px;
+    }
+
+    .block-about {
+        margin-top: 40px;
+
+        .heading {
+            margin-bottom: 10px;
+        }
+
+        .core-item {
+            padding: 10px 0;
+
+            .text-content {
+                padding: 15px;
+            }
+
+            .order-md-1.order-2 {
+                .text-content {
+                    margin-right: auto;
+                }
+            }
+
+            .order-md-2.order-2 {
+                .text-content {
+                    margin-left: auto;
+                }
+            }
+        }
+    }
+
+    .block-banner {
+        .banner-wrapper {
+            height: 95vh;
+        }
+
+        .heading-slider {
+            font-size: 35px;
+            margin-bottom: 25px;
+        }
+
+        .banner-action {
+            margin-bottom: 25px;
+        }
+
+        .banner-logo {
+            background: none;
+            margin-top: 15px;
+
+            &-item {
+                position: relative;
+
+                &:first-child {
+                    left: auto;
+                    top: auto;
+                }
+
+                &:nth-child(2) {
+                    right: auto;
+                    top: auto;
+                    margin-top: 15px;
+                    margin-bottom: 15px;
+                    margin-left: auto;
+                }
+
+                &:last-child {
+                    left: auto;
+                    bottom: auto;
+                }
+
+                .web {
+                    font-size: 18px;
+                }
+            }
+        }
+
+        .btn-signin {
+            margin-left: 15px;
+            font-size: 20px;
+            padding: 8px 25px;
+        }
+
+        .btn-register {
+            font-size: 20px;
+            padding: 8px 25px;
+        }
+    }
+
+    .block-expert {
+        margin-top: 40px;
+
+        .list-image-experts {
+            margin-bottom: 15px;
+
+            .item {
+                &::before {
+                    width: 270px;
+                    height: 300px;
+                }
+            }
+        }
+    }
+
+    .block-why-choose {
+        margin-top: 40px;
+
+        .heading {
+            margin-bottom: 20px;
+        }
+
+        .title {
+            font-size: 20px;
+        }
+
+        .list-content {
+            .item {
+                padding: 15px;
+                padding-left: 50px;
+
+                &:not(:last-child) {
+                    margin-bottom: 0;
+                }
+            }
+
+            .icon {
+                width: 35px;
+                height: 35px;
+                left: 5px;
+            }
+        }
+    }
+
+    .block-course {
+        margin-top: 30px;
+        margin-bottom: 60px;
+
+        .slick-dots {
+            bottom: -25px;
+        }
+
+        &-left {
+            margin-bottom: 20px;
+        }
+    }
+
+
 }

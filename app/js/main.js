@@ -26,6 +26,13 @@ var slider = {
                 autoplaySpeed: 3000,
                 fade: true,
                 speed: 500,
+                responsive: [{
+                    breakpoint: 575,
+                    settings: {
+                        arrows: false,
+                        dots: true,
+                    }
+                }]
             });
         }
     },
@@ -49,8 +56,13 @@ var slider = {
 var actionClick = {
     init: function () {
         $('body').on('click', '.scrollTo', function () {
-            $(this).closest('.primary-nav').find('.menu-item').removeClass('active');
-            $(this).parent().addClass('active');
+            if (window.innerWidth > 768) {
+                $(this).closest('.primary-nav').find('.menu-item').removeClass('active');
+                $(this).parent().addClass('active');
+            }
+            if (window.innerWidth < 768) {
+                $('.main-menu-mb').removeClass('active');
+            }
             var targetId = $(this).attr('href');
             var targetElement = $('#' + targetId);
             var targetDistance = 80;
@@ -119,6 +131,14 @@ var buttonCta = {
             $(this).removeClass('show');
             $('.cta-item-contact').removeClass('closes');
             $('.cta-container .list-cta').removeClass('show');
+        })
+    }
+}
+var toggleMenu = {
+    init: function () {
+        $('body').on('click', '.toggle-menu', function () {
+            $(this).next().toggleClass('active');
+            return false;
         })
     }
 }
@@ -191,5 +211,6 @@ jQuery(document).ready(function () {
     scrollFixed.init();
     scrollToTop.init();
     buttonCta.init();
+    toggleMenu.init();
     formRegister.init();
 });
