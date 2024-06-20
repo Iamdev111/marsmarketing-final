@@ -115,6 +115,10 @@ button:focus {
   z-index: 5;
 }
 
+body.disable-body {
+  overflow: hidden;
+}
+
 .btn-signin {
   border: 1px solid #c22026;
   color: #c22026;
@@ -233,6 +237,9 @@ button:focus {
   color: #c22026;
   font-size: 20px;
   z-index: 2;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .scroll-to-top:hover {
@@ -344,7 +351,7 @@ button:focus {
   }
   .main-menu-mb.active {
     left: 0;
-    border-top: 1px solid #d7d7d7;
+    border-top: 1px solid #e3e3e3;
   }
 }
 
@@ -969,8 +976,8 @@ button:focus {
 }
 
 label {
-  font-weight: 700;
-  font-size: 15px;
+  font-weight: 600;
+  font-size: 14px;
 }
 
 label span {
@@ -1250,7 +1257,7 @@ label span {
   padding-bottom: 15px;
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px solid #ededed;
+  border-bottom: 1px solid #e3e3e3;
 }
 
 .block-course .review {
@@ -1273,7 +1280,7 @@ label span {
 .block-course .review .number {
   font-size: 14px;
   font-weight: 500;
-  color: #a5a5a5;
+  color: #80868b;
 }
 
 .block-course .price {
@@ -1303,10 +1310,6 @@ label span {
 .block-course .course-info p {
   margin-bottom: 0px;
   padding: 8px 0;
-}
-
-.block-course .course-info p:nth-child(2n + 1) {
-  background: #9aa0a60d;
 }
 
 .block-course .course-info .content p {
@@ -1652,6 +1655,7 @@ label span {
   }
   .block-why-choose .list-content .item:not(:last-child) {
     margin-bottom: 0;
+    border-bottom: 1px dashed #e3e3e3;
   }
   .block-why-choose .list-content .icon {
     width: 35px;
@@ -1667,6 +1671,28 @@ label span {
   }
   .block-course-left {
     margin-bottom: 20px;
+  }
+  .block-schedule-desk {
+    display: none;
+  }
+  .block-schedule-mb .schedule-item {
+    display: flex;
+    gap: 15px;
+  }
+  .block-schedule .schedule-time {
+    border: 1px solid #e3e3e3;
+    border-radius: 8px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .block-schedule .schedule-time .date {
+    font-size: 22px;
+    font-weight: 700;
+  }
+  .block-schedule .schedule-time .month {
+    color: #80868b;
   }
 }
 

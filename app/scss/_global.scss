@@ -122,3 +122,7 @@ button:focus {
     top: 0;
     z-index: 5;
 }
+
+body.disable-body {
+    overflow: hidden;
+}

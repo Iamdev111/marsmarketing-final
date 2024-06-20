@@ -56,11 +56,11 @@ var slider = {
 var actionClick = {
     init: function () {
         $('body').on('click', '.scrollTo', function () {
-            if (window.innerWidth > 768) {
+            if (window.matchMedia("(min-width: 768px)").matches) {
                 $(this).closest('.primary-nav').find('.menu-item').removeClass('active');
                 $(this).parent().addClass('active');
             }
-            if (window.innerWidth < 768) {
+            if (window.matchMedia("(max-width: 575px)").matches) {
                 $('.main-menu-mb').removeClass('active');
             }
             var targetId = $(this).attr('href');
@@ -138,6 +138,7 @@ var toggleMenu = {
     init: function () {
         $('body').on('click', '.toggle-menu', function () {
             $(this).next().toggleClass('active');
+            $('body').toggleClass('disable-body');
             return false;
         })
     }
