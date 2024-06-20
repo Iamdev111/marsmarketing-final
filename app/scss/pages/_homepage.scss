@@ -231,6 +231,9 @@
     margin-bottom: 15px;
     text-transform: uppercase;
     font-family: "Barlow Condensed", sans-serif;
+    span {
+        color: $brand;
+    }
 }
 
 label {

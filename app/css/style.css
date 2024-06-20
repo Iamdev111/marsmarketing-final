@@ -215,7 +215,7 @@ body.disable-body {
 }
 
 .btn-sendform {
-  padding: 8px 35px;
+  padding: 6px 35px;
   background: #c22026;
   color: #fff;
   font-weight: 600;
@@ -971,6 +971,10 @@ body.disable-body {
   margin-bottom: 15px;
   text-transform: uppercase;
   font-family: "Barlow Condensed", sans-serif;
+}
+
+.title-form span {
+  color: #c22026;
 }
 
 label {
