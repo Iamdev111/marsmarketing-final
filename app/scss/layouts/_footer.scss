@@ -2,25 +2,21 @@
     background: $dark url(../images/bg-footer.png);
     padding: 30px 0 15px;
     color: $light;
-
     .slogan {
         font-size: 20px;
         margin-bottom: 15px;
     }
-
     .copyright {
         padding-top: 15px;
         margin-top: 30px;
         border-top: 2px solid #2e2e2e;
         font-size: 14px;
     }
-
     .form-email {
         position: relative;
         max-width: 85%;
         margin-left: auto;
     }
-
     .label-form {
         margin-bottom: 15px;
         text-transform: uppercase;

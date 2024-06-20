@@ -4,7 +4,7 @@ body {
     font-size: 16px;
     font-weight: 400;
     word-break: break-word;
-    color: $text;
+    color: $dark;
 }
 
 a {
@@ -35,7 +35,6 @@ button:focus {
     flex-direction: column;
     flex-wrap: wrap;
     align-items: flex-start;
-
     img {
         -o-object-fit: cover;
         object-fit: cover;
@@ -53,13 +52,11 @@ button:focus {
     box-shadow: 0 3px 15px rgba(203, 139, 137, 0.1);
     background: $light;
     border-radius: 40px;
-
     &::before {
         font-family: "Font Awesome 5 Pro";
         color: $brand;
         opacity: 1;
     }
-
     &:hover {
         background: $light;
     }
@@ -81,12 +78,12 @@ button:focus {
     li {
         height: 8px;
         width: 8px;
-
+        transition: all 0.3s;
         button {
             height: 8px;
             width: 8px;
             padding: 0;
-
+            transition: all 0.3s;
             &:before {
                 content: "";
                 background: #a5a5a5;
@@ -94,15 +91,13 @@ button:focus {
                 width: 8px;
                 border-radius: 8px;
                 opacity: 1;
+                transition: all 0.3s;
             }
         }
-
         &.slick-active {
             width: 25px;
-
             button {
                 width: 25px;
-
                 &::before {
                     background: $brand;
                     opacity: 1;

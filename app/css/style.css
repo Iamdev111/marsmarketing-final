@@ -4,7 +4,7 @@ body {
   font-size: 16px;
   font-weight: 400;
   word-break: break-word;
-  color: #333;
+  color: #222;
 }
 
 a:hover {
@@ -74,12 +74,14 @@ button:focus {
 .slick-dots li {
   height: 8px;
   width: 8px;
+  transition: all 0.3s;
 }
 
 .slick-dots li button {
   height: 8px;
   width: 8px;
   padding: 0;
+  transition: all 0.3s;
 }
 
 .slick-dots li button:before {
@@ -89,6 +91,7 @@ button:focus {
   width: 8px;
   border-radius: 8px;
   opacity: 1;
+  transition: all 0.3s;
 }
 
 .slick-dots li.slick-active {
@@ -796,43 +799,38 @@ body.disable-body {
 }
 
 .block-faq {
-  margin-top: 70px;
-}
-
-.block-faq .sub-heading {
-  margin-bottom: 30px;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  background: #f8f9fa;
 }
 
 .block-faq .item-faq {
   padding: 20px;
   position: relative;
-}
-
-.block-faq .item-faq:not(:first-child) {
-  border-top: 1px solid #f0efeb;
+  background: #fff;
+  border-radius: 35px;
 }
 
 .block-faq .item-faq.active {
-  background: #f0efeb;
-  border-radius: 8px;
-  border-bottom: 0;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
 }
 
 .block-faq .item-faq.active .extend::after {
-  content: "\f056";
+  content: "\f106";
 }
 
 .block-faq .item-faq.active .faq-name {
   margin-bottom: 15px;
 }
 
-.block-faq .item-faq.active + .item-faq {
-  border-top: 0;
+.block-faq .item-faq:not(:last-child) {
+  margin-bottom: 20px;
 }
 
 .block-faq .faq-name {
   font-size: 20px;
-  font-weight: 700;
+  font-weight: 600;
+  font-family: "Barlow Condensed", sans-serif;
 }
 
 .block-faq .extend {
@@ -842,7 +840,7 @@ body.disable-body {
 }
 
 .block-faq .extend::after {
-  content: "\f055";
+  content: "\f107";
   font-family: Font Awesome\ 5 Pro;
   font-size: 20px;
   cursor: pointer;
@@ -903,7 +901,7 @@ body.disable-body {
 }
 
 .block-form {
-  padding: 70px 0;
+  margin: 70px 0;
 }
 
 .block-form .heading {
@@ -1365,7 +1363,7 @@ label span {
 
 .block-schedule .schedule-head {
   background: #9aa0a60d;
-  border: 1px solid #9aa0a633;
+  border: 1px solid #e3e3e3;
   border-radius: 8px;
 }
 
@@ -1376,7 +1374,7 @@ label span {
 }
 
 .block-schedule .schedule-head th:not(:last-child) {
-  border-right: 1px solid #9aa0a633;
+  border-right: 1px solid #e3e3e3;
 }
 
 .block-schedule .schedule-head th:not(:first-child) {
@@ -1439,6 +1437,10 @@ label span {
   padding: 6px 25px;
   font-size: 16px;
   border-radius: 20px;
+}
+
+.block-schedule-mb {
+  display: none;
 }
 
 .cta-container .cta-item {
@@ -1574,6 +1576,9 @@ label span {
   .block-about .heading {
     margin-bottom: 10px;
   }
+  .block-about .core-title {
+    font-size: 22px;
+  }
   .block-about .core-item {
     padding: 10px 0;
   }
@@ -1675,9 +1680,15 @@ label span {
   .block-schedule-desk {
     display: none;
   }
+  .block-schedule-mb {
+    display: block;
+  }
   .block-schedule-mb .schedule-item {
     display: flex;
     gap: 15px;
+  }
+  .block-schedule-mb .schedule-item:not(:last-child) {
+    margin-bottom: 20px;
   }
   .block-schedule .schedule-time {
     border: 1px solid #e3e3e3;
@@ -1693,6 +1704,48 @@ label span {
   }
   .block-schedule .schedule-time .month {
     color: #80868b;
+  }
+  .block-schedule .schedule-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+  .block-schedule .schedule-detail,
+  .block-schedule .location {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+  .block-feedback {
+    padding: 40px 0;
+  }
+  .block-feedback .sub-heading {
+    max-width: 100%;
+  }
+  .block-feedback .slick-list {
+    padding-left: 0 !important;
+  }
+  .block-faq {
+    padding: 40px 0;
+  }
+  .block-form {
+    margin: 40px 0;
+  }
+  .block-form .wrap-left {
+    padding: 20px;
+    border-bottom-right-radius: 0;
+  }
+  .block-form .slogan {
+    font-size: 20px;
+  }
+  .footer .slogan {
+    text-align: center;
+  }
+  .footer .list-social {
+    justify-content: center;
+  }
+  .footer .form-email {
+    max-width: 100%;
+    margin-top: 15px;
   }
 }
 

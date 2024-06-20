@@ -1,5 +1,4 @@
 @media (min-width: 1400px) {
-
     .container,
     .container-lg,
     .container-md,
@@ -7,7 +6,6 @@
     .container-xl {
         max-width: 1400px;
     }
-
     .block-banner {
         .container-banner {
             padding-left: 120px;
@@ -17,26 +15,21 @@
 }
 
 @media (min-width:768px) {
-
     /* --- Menu --- */
     .primary-nav {
         .main-menu {
             flex-direction: row;
-
             &-left {
                 margin-right: auto;
             }
-
             &-right {
                 margin-left: auto;
             }
-
             &-mb {
                 display: none;
             }
         }
     }
-
     /* --- End Menu --- */
 }
 
@@ -44,50 +37,41 @@
     .heading {
         font-size: 35px;
     }
-
     .toggle-menu {
         display: block;
     }
-
     .brand-logo {
         margin-left: auto;
         margin-right: auto;
     }
-
     /* --- Header ---*/
-
     .logo-header {
         width: 50px;
         height: 57px;
     }
-
     /* --- End Header --- */
-
     /* --- Main --- */
     .main-page {
         margin-top: 75px;
     }
-
     .block-about {
         margin-top: 40px;
-
         .heading {
             margin-bottom: 10px;
         }
-
+        .core-title {
+            font-size: 22px;
+        }
         .core-item {
             padding: 10px 0;
-
             .text-content {
                 padding: 15px;
             }
-
             .order-md-1.order-2 {
                 .text-content {
                     margin-right: auto;
                 }
             }
-
             .order-md-2.order-2 {
                 .text-content {
                     margin-left: auto;
@@ -95,33 +79,26 @@
             }
         }
     }
-
     .block-banner {
         .banner-wrapper {
             height: 95vh;
         }
-
         .heading-slider {
             font-size: 35px;
             margin-bottom: 25px;
         }
-
         .banner-action {
             margin-bottom: 25px;
         }
-
         .banner-logo {
             background: none;
             margin-top: 15px;
-
             &-item {
                 position: relative;
-
                 &:first-child {
                     left: auto;
                     top: auto;
                 }
-
                 &:nth-child(2) {
                     right: auto;
                     top: auto;
@@ -129,36 +106,29 @@
                     margin-bottom: 15px;
                     margin-left: auto;
                 }
-
                 &:last-child {
                     left: auto;
                     bottom: auto;
                 }
-
                 .web {
                     font-size: 18px;
                 }
             }
         }
-
         .btn-signin {
             margin-left: 15px;
             font-size: 20px;
             padding: 8px 25px;
         }
-
         .btn-register {
             font-size: 20px;
             padding: 8px 25px;
         }
     }
-
     .block-expert {
         margin-top: 40px;
-
         .list-image-experts {
             margin-bottom: 15px;
-
             .item {
                 &::before {
                     width: 270px;
@@ -167,29 +137,23 @@
             }
         }
     }
-
     .block-why-choose {
         margin-top: 40px;
-
         .heading {
             margin-bottom: 20px;
         }
-
         .title {
             font-size: 20px;
         }
-
         .list-content {
             .item {
                 padding: 15px;
                 padding-left: 50px;
-
                 &:not(:last-child) {
                     margin-bottom: 0;
-                    border-bottom: 1px dashed #e3e3e3;
+                    border-bottom: 1px dashed $border;
                 }
             }
-
             .icon {
                 width: 35px;
                 height: 35px;
@@ -197,32 +161,30 @@
             }
         }
     }
-
     .block-course {
         margin-top: 30px;
         margin-bottom: 60px;
-
         .slick-dots {
             bottom: -25px;
         }
-
         &-left {
             margin-bottom: 20px;
         }
     }
-
     .block-schedule {
         &-desk {
             display: none;
         }
-
         &-mb {
+            display: block;
             .schedule-item {
                 display: flex;
                 gap: 15px;
+                &:not(:last-child) {
+                    margin-bottom: 20px;
+                }
             }
         }
-
         .schedule-time {
             border: 1px solid #e3e3e3;
             border-radius: 8px;
@@ -230,15 +192,57 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-
             .date {
                 font-size: 22px;
                 font-weight: 700;
             }
-
             .month {
                 color: #80868b;
             }
+        }
+        .schedule-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        .schedule-detail,
+        .location {
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+    }
+    .block-feedback {
+        padding: 40px 0;
+        .sub-heading {
+            max-width: 100%;
+        }
+        .slick-list {
+            padding-left: 0 !important;
+        }
+    }
+    .block-faq {
+        padding: 40px 0;
+    }
+    .block-form {
+        margin: 40px 0;
+        .wrap-left {
+            padding: 20px;
+            border-bottom-right-radius: 0;
+        }
+        .slogan {
+            font-size: 20px;
+        }
+    }
+    .footer {
+        .slogan {
+            text-align: center;
+        }
+        .list-social {
+            justify-content: center;
+        }
+        .form-email {
+            max-width: 100%;
+            margin-top: 15px;
         }
     }
 }

@@ -1,9 +1,10 @@
 var slider = {
-    init: function () {
+    init: function() {
         slider.slideExperts();
         slider.slideCourse();
+        slider.slideFeedback();
     },
-    slideExperts: function () {
+    slideExperts: function() {
         if ($('.list-image-experts .item').length > 1 && $('.list-content-experts .item').length > 1) {
             $('.list-image-experts').slick({
                 slidesToShow: 1,
@@ -36,7 +37,7 @@ var slider = {
             });
         }
     },
-    slideCourse: function () {
+    slideCourse: function() {
         var listSlide = $('.list-course');
         var numberSlide = $('.list-course .course-item').length;
         if (listSlide.length > 0 && numberSlide >= 1) {
@@ -51,11 +52,30 @@ var slider = {
                 autoplaySpeed: 3000,
             });
         }
+    },
+    slideFeedback: function() {
+        var listSlide = $('.block-feedback .list-student');
+        var numberSlide = $('.block-feedback .list-student .student').length;
+        if (window.matchMedia("(max-width: 575px)").matches) {
+            if (listSlide.length > 0 && numberSlide >= 1) {
+                listSlide.slick({
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    speed: 1000,
+                    autoplaySpeed: 3000,
+                    autoplay: true,
+                    arrows: false,
+                    dots: true,
+                    centerMode: true,
+                    centerPadding: '10%',
+                })
+            }
+        }
     }
 }
 var actionClick = {
-    init: function () {
-        $('body').on('click', '.scrollTo', function () {
+    init: function() {
+        $('body').on('click', '.scrollTo', function() {
             if (window.matchMedia("(min-width: 768px)").matches) {
                 $(this).closest('.primary-nav').find('.menu-item').removeClass('active');
                 $(this).parent().addClass('active');
@@ -77,16 +97,16 @@ var actionClick = {
     }
 }
 var scrollFixed = {
-    init: function () {
+    init: function() {
         var header = $('#header');
         var headerOffset = header.offset().top;
-        $(window).on('load', function () {
+        $(window).on('load', function() {
             if (headerOffset > 0) {
                 header.addClass('fixed-header');
                 $('.scroll-to-top').addClass('fixed');
             }
         })
-        $(window).scroll(function () {
+        $(window).scroll(function() {
             if ($(window).scrollTop() > 0) {
                 header.addClass('fixed-header');
                 $('.scroll-to-top').addClass('fixed');
@@ -99,35 +119,35 @@ var scrollFixed = {
     }
 }
 var faq = {
-    init: function () {
-        $('body').on('click', '.list-faq .item-faq:not(.active) .extend', function () {
+    init: function() {
+        $('body').on('click', '.list-faq .item-faq:not(.active) .extend', function() {
             $(this).parent().siblings().removeClass('active');
             $(this).parent().addClass('active');
-            $(this).next().slideDown(300);
-            $(this).parent().siblings().find('.faq-content').slideUp(300);
+            $(this).next().slideDown(200);
+            $(this).parent().siblings().find('.faq-content').slideUp(200);
         });
-        $('body').on('click', '.list-faq .item-faq.active .extend', function () {
-            $(this).next().slideUp(300);
+        $('body').on('click', '.list-faq .item-faq.active .extend', function() {
+            $(this).next().slideUp(200);
             $(this).parent().removeClass('active');
         })
     }
 }
 var scrollToTop = {
-    init: function () {
-        $('.scroll-to-top').click(function () {
+    init: function() {
+        $('.scroll-to-top').click(function() {
             $('html, body').animate({ scrollTop: 0 }, 600);
             return false;
         })
     }
 }
 var buttonCta = {
-    init: function () {
-        $('body').on('click', '.cta-item-contact', function () {
+    init: function() {
+        $('body').on('click', '.cta-item-contact', function() {
             $(this).toggleClass('closes');
             $('.overlay').toggleClass('show');
             $(this).next().toggleClass('show');
         })
-        $('body').on('click', '.overlay', function () {
+        $('body').on('click', '.overlay', function() {
             $(this).removeClass('show');
             $('.cta-item-contact').removeClass('closes');
             $('.cta-container .list-cta').removeClass('show');
@@ -135,8 +155,8 @@ var buttonCta = {
     }
 }
 var toggleMenu = {
-    init: function () {
-        $('body').on('click', '.toggle-menu', function () {
+    init: function() {
+        $('body').on('click', '.toggle-menu', function() {
             $(this).next().toggleClass('active');
             $('body').toggleClass('disable-body');
             return false;
@@ -144,17 +164,17 @@ var toggleMenu = {
     }
 }
 var formRegister = {
-    init: function () {
+    init: function() {
         var formGoogle = $('form.form-ggs');
         if (formGoogle.length > 0) {
-            formGoogle.on('submit', function () {
+            formGoogle.on('submit', function() {
                 var container = $(this);
                 formRegister.sendForm(container);
                 return false;
             })
         }
     },
-    sendForm: function (container) {
+    sendForm: function(container) {
         var fullname = $(container).find('input[name="fullname"]').val();
         var numberphone = $(container).find('input[name="numberphone"]').val();
         var email = $(container).find('input[name="email"]').val();
@@ -176,23 +196,23 @@ var formRegister = {
                     "entry.1624929131": content,
                 },
                 statusCode: {
-                    0: function () {
+                    0: function() {
                         $('#modalRegister').modal('hide');
-                        setTimeout(function () {
+                        setTimeout(function() {
                             $('#modal-alert-success').modal('show');
                         }, 1000);
-                        setTimeout(function () {
+                        setTimeout(function() {
                             $('#modal-alert-success').modal('hide');
                         }, 3000);
                         $(container).closest('form').find("input[type=text],input[type=email], textarea").val("");
                         $(container).find('button').attr('disabled', 'disabled');
                     },
-                    200: function () {
+                    200: function() {
                         $('#modalRegister').modal('hide');
-                        setTimeout(function () {
+                        setTimeout(function() {
                             $('#modal-alert-success').modal('show');
                         }, 1000);
-                        setTimeout(function () {
+                        setTimeout(function() {
                             $('#modal-alert-success').modal('hide');
                         }, 3000);
                         $(container).closest('form').find("input[type=text],input[type=email], textarea").val("");
@@ -205,7 +225,7 @@ var formRegister = {
         }
     }
 }
-jQuery(document).ready(function () {
+jQuery(document).ready(function() {
     faq.init();
     slider.init();
     actionClick.init();
