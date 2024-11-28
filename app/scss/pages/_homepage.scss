@@ -10,7 +10,6 @@
     margin-bottom: 20px;
     font-family: "Barlow Condensed", sans-serif;
     color: $dark;
-
     i {
         color: $brand;
     }
@@ -22,11 +21,9 @@
     text-transform: uppercase;
     font-family: "Barlow Condensed", sans-serif;
     margin-bottom: 20px;
-
     &-center {
         text-align: center;
     }
-
     span {
         color: $brand;
     }
@@ -40,15 +37,69 @@
     margin-top: 90px;
 }
 
+.module-course {
+    .inner {
+        border: 1px solid #9aa0a60d;
+        box-shadow: 0 2px 16px 0 rgba(0, 41, 87, 0.1);
+        padding: 20px 15px;
+        border-radius: 10px;
+        position: relative;
+        &.show {
+            .title {
+                margin-bottom: 10px;
+            }
+        }
+    }
+    .title {
+        font-size: 18px;
+        font-weight: 700;
+        margin-bottom: 0;
+    }
+    .s-title {
+        font-weight: 700;
+        margin-bottom: 8px;
+    }
+    .target,
+    .content {
+        ul {
+            padding-left: 16px;
+            margin-bottom: 0;
+            li {
+                &:not(:last-child) {
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+    .target {
+        margin-bottom: 15px;
+    }
+    .btn-action {
+        width: 25px;
+        height: 20px;
+        margin-left: auto;
+        position: absolute;
+        top: 20px;
+        right: 15px;
+        text-align: center;
+        cursor: pointer;
+        &::before {
+            content: "\f107";
+            font-family: Font Awesome\ 5 Pro;
+        }
+    }
+    .wrap {
+        display: none;
+    }
+}
+
 .block-feedback {
     background: #222 url(../images/bg-footer.png);
     background-repeat: repeat-x;
     padding: 70px 0 40px;
-
     .heading {
         color: $light;
     }
-
     .sub-heading {
         max-width: 60%;
         text-align: center;
@@ -56,7 +107,6 @@
         color: $light;
         margin-bottom: 40px;
     }
-
     .inner {
         background: $light;
         border-radius: 8px;
@@ -64,7 +114,6 @@
         font-size: 18px;
         font-weight: 500;
         margin-bottom: 30px;
-
         i {
             color: $brand;
             font-size: 22px;
@@ -74,18 +123,15 @@
 
 .meta-people {
     display: flex;
-
     .avatar {
         width: 50px;
         height: 50px;
         border-radius: 50px;
         margin-right: 10px;
     }
-
     .name {
         font-weight: 700;
     }
-
     .job-title {
         font-size: 14px;
     }
@@ -95,43 +141,35 @@
     padding-top: 70px;
     padding-bottom: 70px;
     background: #f8f9fa;
-
     .item-faq {
         padding: 20px;
         position: relative;
         background: $light;
         border-radius: 35px;
-
         &.active {
             box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
-
             .extend {
                 &::after {
                     content: "\f106";
                 }
             }
-
             .faq-name {
                 margin-bottom: 15px;
             }
         }
-
         &:not(:last-child) {
             margin-bottom: 20px;
         }
     }
-
     .faq-name {
         font-size: 20px;
         font-weight: 600;
         font-family: "Barlow Condensed", sans-serif;
     }
-
     .extend {
         position: absolute;
         right: 20px;
         top: 20px;
-
         &::after {
             content: "\f107";
             font-family: Font Awesome\ 5 Pro;
@@ -139,125 +177,108 @@
             cursor: pointer;
         }
     }
-
     .faq-content {
         display: none;
     }
 }
 
 .block-expert {
-    margin-top: 70px;
-
+    margin-top: 60px;
+    padding-top: 60px;
+    background: url(../images/bg-expert.png) no-repeat;
+    background-size: cover;
+    color: $light;
+    .heading {
+        color: #ffc129;
+    }
+    .expert-title {
+        font-size: 26px;
+        text-transform: uppercase;
+        font-weight: 700;
+        margin-bottom: 15px;
+    }
+    .meta {
+        &-default {
+            margin-bottom: 0;
+            li {
+                i {
+                    font-size: 15px;
+                    margin-right: 5px;
+                }
+                &:not(:last-child) {
+                    margin-bottom: 10px;
+                }
+            }
+        }
+        &-position {
+            list-style: none;
+            padding-left: 0;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+        &-experience {
+            padding-left: 18px;
+        }
+    }
     .list-image-experts {
         .item {
             position: relative;
-
-            &::before {
-                content: "";
-                width: 400px;
-                height: 400px;
-                background: url(../images/logo/logo-r.png) no-repeat;
-                background-size: 100% 100%;
-                position: absolute;
-                left: 50%;
-                top: 50%;
-                transform: translate(-50%, -50%);
-                z-index: -1;
-                opacity: 0.05;
-            }
-
             img {
                 margin: 0 auto;
             }
         }
     }
-
-    .apostrophe {
-        font-size: 40px;
-        color: $brand;
-    }
-
-    .meta-people {
-        margin-top: 20px;
-    }
-
-    .slick-prev,
-    .slick-next {
-        transform: none;
-    }
-
-    .slick-prev {
-        top: 100%;
-        left: 80%;
-    }
-
-    .slick-next {
-        top: 100%;
-        right: 6%;
-    }
 }
 
 .block-form {
     margin: 70px 0;
-
     .heading {
         margin-bottom: 30px;
     }
-
     .wrap-left {
         background: $dark;
         height: 100%;
         padding: 50px 50px 50px 70px;
         color: $light;
         border-bottom-right-radius: 60px;
-
         .logo {
             width: 100px;
             height: 114px;
             margin-bottom: 25px;
         }
-
         a {
             color: $light;
         }
     }
-
     .slogan {
         font-size: 24px;
         font-weight: 700;
         margin-bottom: 20px;
     }
-
     .sub-slogan {
         margin-bottom: 15px;
     }
-
     .info {
         list-style: none;
         padding-left: 0;
         margin-bottom: 0;
     }
-
     .item {
         &:not(:last-child) {
             margin-bottom: 10px;
         }
-
         i {
             width: 20px;
             margin-right: 5px;
         }
-
         span {
             font-weight: 700;
         }
     }
-
     select.form-control,
     input.form-control {
         height: 42px;
     }
-
     .form-order {
         box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
         padding: 40px 20px;
@@ -270,7 +291,6 @@
     margin-bottom: 15px;
     text-transform: uppercase;
     font-family: "Barlow Condensed", sans-serif;
-
     span {
         color: $brand;
     }
@@ -279,7 +299,6 @@
 label {
     font-weight: 600;
     font-size: 14px;
-
     span {
         color: #db0000;
         font-weight: 400;
@@ -297,25 +316,20 @@ label {
 
 .block-why-choose {
     margin-top: 70px;
-
     .heading {
         margin-bottom: 40px;
     }
-
     .list-content {
         list-style: none;
         padding-left: 0;
         margin-bottom: 0;
-
         .item {
             position: relative;
             padding-left: 80px;
-
             &:not(:last-child) {
                 margin-bottom: 15px;
             }
         }
-
         .icon {
             width: 50px;
             height: 50px;
@@ -324,17 +338,14 @@ label {
             top: 20px;
         }
     }
-
     .title {
         font-size: 22px;
         font-weight: 600;
         font-family: Barlow Condensed, sans-serif;
     }
-
     .item {
         // background: #fff2f2;
         padding: 15px 30px;
-
         // border-radius: 8px;
         .text {
             margin-bottom: 0;
@@ -346,24 +357,20 @@ label {
     background: url(../images/banner-homepage.png) no-repeat top;
     background-size: cover;
     position: relative;
-
     .banner-wrapper {
         height: 90vh;
     }
-
     .banner-content {
         display: flex;
         flex-direction: column;
         justify-content: center;
     }
-
     .heading-slider {
         font-size: 70px;
         font-family: "Barlow Condensed", sans-serif;
         font-weight: 700;
         margin-bottom: 35px;
     }
-
     .banner-logo {
         background: url(../images/home-banner.png);
         background-position: center;
@@ -371,63 +378,50 @@ label {
         background-size: 70%;
         position: relative;
     }
-
     .banner-action {
         margin-bottom: 35px;
     }
-
     .quantity-user {
         font-size: 35px;
         font-weight: 700;
         font-family: "Barlow Condensed", sans-serif;
     }
-
     .total-user {
         position: relative;
     }
-
     .text-banner {
         font-size: 18px;
     }
-
     .icon {
         font-size: 20px;
         position: absolute;
         left: 0;
         top: 10px;
     }
-
     .total-mobile {
         padding-left: 30px;
     }
-
     .total-register {
         margin-left: 15px;
-
         .total-mobile {
             padding-left: 35px;
         }
     }
-
     .banner-logo-item {
         width: fit-content;
         position: absolute;
-
         &:first-child {
             left: 0;
             top: 18%;
         }
-
         &:nth-child(2) {
             right: -5%;
             top: 45%;
         }
-
         &:last-child {
             bottom: 20%;
             left: 5%;
         }
-
         .item {
             background: $light;
             padding: 16px 20px 16px 16px;
@@ -438,19 +432,16 @@ label {
             transition: all .5s;
             font-family: "Barlow Condensed", sans-serif;
         }
-
         .web {
             font-size: 20px;
             font-weight: 500;
             line-height: 1.3;
         }
-
         .img-logo {
             width: 45px;
             margin-right: 10px;
         }
     }
-
     .btn-signin {
         margin-left: 20px;
         padding: 10px 32px;
@@ -461,7 +452,6 @@ label {
 
 .block-about {
     margin-top: 70px;
-
     .core-title {
         font-weight: 700;
         font-family: Barlow Condensed, sans-serif;
@@ -469,11 +459,9 @@ label {
         font-size: 28px;
         color: $dark;
     }
-
     .core-item {
         align-items: center;
         padding: 20px 0;
-
         .text-content {
             background: $light;
             box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
@@ -482,19 +470,16 @@ label {
             position: relative;
             z-index: 2;
         }
-
         .order-md-1.order-2 {
             .text-content {
                 margin-right: -70px;
             }
         }
-
         .order-md-2.order-2 {
             .text-content {
                 margin-left: -70px;
             }
         }
-
         .inner {
             p {
                 margin-bottom: 0;
@@ -506,21 +491,18 @@ label {
 .block-course {
     margin-top: 80px;
     margin-bottom: 120px;
-
     &-left {
         .course {
             .thumbnail {
                 border-radius: 10px;
                 margin-bottom: 15px;
             }
-
             &-title {
                 font-size: 24px;
                 font-weight: 600;
                 font-family: Barlow Condensed, sans-serif;
                 margin-bottom: 0;
             }
-
             &-meta {
                 .meta {
                     list-style: none;
@@ -529,32 +511,27 @@ label {
                     display: flex;
                     justify-content: space-between;
                 }
-
                 .item {
                     position: relative;
                     padding-left: 25px;
-
                     &::before {
                         font-family: Font Awesome\ 5 Pro;
                         position: absolute;
                         top: 0;
                         left: 0;
                     }
-
                     &:nth-child(1) {
                         &::before {
                             content: "\f5ff";
                             color: #6400ff;
                         }
                     }
-
                     &:nth-child(2) {
                         &::before {
                             content: "\f573";
                             color: #ff0000;
                         }
                     }
-
                     &:nth-child(3) {
                         &::before {
                             content: "\f017";
@@ -562,7 +539,6 @@ label {
                         }
                     }
                 }
-
                 .text {
                     font-size: 14px;
                     font-weight: 600;
@@ -570,7 +546,6 @@ label {
             }
         }
     }
-
     .price-review {
         margin-top: 15px;
         margin-bottom: 15px;
@@ -579,41 +554,34 @@ label {
         justify-content: space-between;
         border-bottom: 1px solid $border;
     }
-
     .review {
         display: flex;
         align-items: center;
-
         &-star {
             list-style: none;
             padding-left: 0;
             margin-bottom: 0;
             margin-right: 15px;
-
             li {
                 display: inline-block;
                 color: #fb6f30;
             }
         }
-
         .number {
             font-size: 14px;
             font-weight: 500;
             color: #80868b;
         }
     }
-
     .price {
         font-size: 22px;
         font-weight: 600;
         color: #d0021c;
         font-family: Barlow Condensed, sans-serif;
     }
-
     .heading {
         margin-bottom: 30px;
     }
-
     .course-info {
         i {
             color: $brand;
@@ -621,25 +589,21 @@ label {
             margin-right: 5px;
             text-align: center;
         }
-
         span {
             font-size: 17px;
             font-weight: 600;
             font-family: "Barlow Condensed", sans-serif;
         }
-
         p {
             margin-bottom: 0px;
             padding: 8px 0;
         }
-
         .content {
             p {
                 background: transparent;
             }
         }
     }
-
     &-right {
         .title {
             font-size: 22px;
@@ -649,20 +613,17 @@ label {
             margin-bottom: 15px;
         }
     }
-
     .tuition {
         &-title {
             margin-bottom: 10px;
         }
     }
-
     .content-title {
         font-weight: 600;
         font-family: "Barlow Condensed", sans-serif;
         font-size: 17px;
         margin-bottom: 10px;
         position: relative;
-
         &::after {
             content: "";
             width: 82px;
@@ -673,14 +634,12 @@ label {
             bottom: -3px;
         }
     }
-
     .content {
         p {
             padding: 0;
             margin-bottom: 10px;
         }
     }
-
     .slick-dots {
         bottom: -45px;
     }
@@ -688,60 +647,49 @@ label {
 
 .block-schedule {
     margin-bottom: 50px;
-
     &-table {
         width: 100%;
     }
-
     .schedule-head {
         background: #9aa0a60d;
         border: 1px solid $border;
         border-radius: 8px;
-
         th {
             padding: 10px 12px;
             font-weight: normal;
             color: #80868b;
-
             &:not(:last-child) {
                 border-right: 1px solid $border;
             }
-
             &:not(:first-child) {
                 text-align: center;
             }
-
             i {
                 margin-right: 4px;
             }
         }
     }
-
     .schedule-body {
         td {
             padding: 8px 12px;
         }
-
         .item {
             &:nth-child(2n) {
                 background: #9aa0a60d;
                 border-radius: 5px;
             }
         }
-
         td {
             &:not(:first-child) {
                 text-align: center;
             }
         }
     }
-
     .item-method {
         padding: 2px 8px 2px 25px;
         display: inline-block;
         border-radius: 20px;
         position: relative;
-
         &::before {
             content: "";
             width: 10px;
@@ -751,32 +699,26 @@ label {
             left: 8px;
             top: 10px;
         }
-
         &-orange {
             color: #ff8633;
             background: #ff771a1a;
-
             &::before {
                 background: #ff8633;
             }
         }
-
         &-blue {
             color: #007dff;
             background: #007dff26;
-
             &::before {
                 background: #007dff;
             }
         }
     }
-
     .btn-signin {
         padding: 6px 25px;
         font-size: 16px;
         border-radius: 20px;
     }
-
     &-mb {
         display: none;
     }
@@ -795,49 +737,40 @@ label {
         font-size: 20px;
         position: relative;
         z-index: 6;
-
         a {
             color: $light;
         }
-
         &-contact {
             background: #db0000;
             position: fixed;
             left: 15px;
             bottom: 30px;
-
             &::before {
                 content: "\f4b0";
                 font-family: Font Awesome\ 5 Pro;
             }
-
             &.closes {
                 &::before {
                     content: "\f00d";
                 }
             }
         }
-
         &-phone {
             background: #fc8800;
         }
-
         &-zalo {
             background: #0068ff;
         }
-
         &-mess {
             background: linear-gradient(220.97deg, #ff666d 8.67%, #9539fe 52.12%, #0191ff 87.37%);
         }
     }
-
     .text {
         position: absolute;
         left: calc(100% + 10px);
         width: 70px;
         font-size: 14px;
     }
-
     .list-cta {
         display: inline-flex;
         flex-direction: column;
@@ -848,13 +781,11 @@ label {
         transition: all 0.3s;
         opacity: 0;
         visibility: hidden;
-
         &.show {
             bottom: 90px;
             opacity: 1;
             visibility: visible;
         }
-
         .cta-item {
             margin-bottom: 10px;
         }

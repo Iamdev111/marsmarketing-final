@@ -747,6 +747,64 @@ body.disable-body {
   margin-top: 90px;
 }
 
+.module-course .inner {
+  border: 1px solid #9aa0a60d;
+  box-shadow: 0 2px 16px 0 rgba(0, 41, 87, 0.1);
+  padding: 20px 15px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.module-course .inner.show .title {
+  margin-bottom: 10px;
+}
+
+.module-course .title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+.module-course .s-title {
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.module-course .target ul,
+.module-course .content ul {
+  padding-left: 16px;
+  margin-bottom: 0;
+}
+
+.module-course .target ul li:not(:last-child),
+.module-course .content ul li:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.module-course .target {
+  margin-bottom: 15px;
+}
+
+.module-course .btn-action {
+  width: 25px;
+  height: 20px;
+  margin-left: auto;
+  position: absolute;
+  top: 20px;
+  right: 15px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.module-course .btn-action::before {
+  content: "\f107";
+  font-family: Font Awesome\ 5 Pro;
+}
+
+.module-course .wrap {
+  display: none;
+}
+
 .block-feedback {
   background: #222 url(../images/bg-footer.png);
   background-repeat: repeat-x;
@@ -851,53 +909,54 @@ body.disable-body {
 }
 
 .block-expert {
-  margin-top: 70px;
+  margin-top: 60px;
+  padding-top: 60px;
+  background: url(../images/bg-expert.png) no-repeat;
+  background-size: cover;
+  color: #fff;
+}
+
+.block-expert .heading {
+  color: #ffc129;
+}
+
+.block-expert .expert-title {
+  font-size: 26px;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.block-expert .meta-default {
+  margin-bottom: 0;
+}
+
+.block-expert .meta-default li i {
+  font-size: 15px;
+  margin-right: 5px;
+}
+
+.block-expert .meta-default li:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.block-expert .meta-position {
+  list-style: none;
+  padding-left: 0;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.block-expert .meta-experience {
+  padding-left: 18px;
 }
 
 .block-expert .list-image-experts .item {
   position: relative;
 }
 
-.block-expert .list-image-experts .item::before {
-  content: "";
-  width: 400px;
-  height: 400px;
-  background: url(../images/logo/logo-r.png) no-repeat;
-  background-size: 100% 100%;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  z-index: -1;
-  opacity: 0.05;
-}
-
 .block-expert .list-image-experts .item img {
   margin: 0 auto;
-}
-
-.block-expert .apostrophe {
-  font-size: 40px;
-  color: #c22026;
-}
-
-.block-expert .meta-people {
-  margin-top: 20px;
-}
-
-.block-expert .slick-prev,
-.block-expert .slick-next {
-  transform: none;
-}
-
-.block-expert .slick-prev {
-  top: 100%;
-  left: 80%;
-}
-
-.block-expert .slick-next {
-  top: 100%;
-  right: 6%;
 }
 
 .block-form {
@@ -1523,13 +1582,6 @@ label span {
 }
 
 @media (min-width: 1400px) {
-  .container,
-  .container-lg,
-  .container-md,
-  .container-sm,
-  .container-xl {
-    max-width: 1400px;
-  }
   .block-banner .container-banner {
     padding-left: 120px;
     padding-right: 120px;
