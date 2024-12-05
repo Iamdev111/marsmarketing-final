@@ -5,7 +5,7 @@
     margin-bottom: 0;
 
     .item {
-        background: #2e2e2e;
+        background: $light;
         height: 30px;
         width: 30px;
         border-radius: 5px;
@@ -18,6 +18,6 @@
     }
 
     a {
-        color: $light;
+        color: $brand;
     }
 }

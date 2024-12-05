@@ -1,25 +1,5 @@
-var slider = {
+var slide_feedback = {
     init: function () {
-        slider.slideCourse();
-        slider.slideFeedback();
-    },
-    slideCourse: function () {
-        var listSlide = $('.list-course');
-        var numberSlide = $('.list-course .course-item').length;
-        if (listSlide.length > 0 && numberSlide >= 1) {
-            listSlide.slick({
-                dots: true,
-                infinite: true,
-                speed: 500,
-                fade: true,
-                arrows: false,
-                cssEase: 'linear',
-                autoplay: true,
-                autoplaySpeed: 3000,
-            });
-        }
-    },
-    slideFeedback: function () {
         var listSlide = $('.block-feedback .list-student');
         var numberSlide = $('.block-feedback .list-student .student').length;
 
@@ -90,20 +70,6 @@ var scrollFixed = {
                 $('.scroll-to-top').removeClass('fixed');
             }
         });
-    }
-}
-var faq = {
-    init: function () {
-        $('body').on('click', '.list-faq .item-faq:not(.active) .extend', function () {
-            $(this).parent().siblings().removeClass('active');
-            $(this).parent().addClass('active');
-            $(this).next().slideDown(200);
-            $(this).parent().siblings().find('.faq-content').slideUp(200);
-        });
-        $('body').on('click', '.list-faq .item-faq.active .extend', function () {
-            $(this).next().slideUp(200);
-            $(this).parent().removeClass('active');
-        })
     }
 }
 var scrollToTop = {
@@ -223,9 +189,6 @@ var module_course = {
 }
 var slide_gallery = {
     init: function () {
-        slide_gallery.slide_one();
-    },
-    slide_one: function () {
         var slide = $('.block-gallery .list-gallery');
         var number_slide = $('.block-gallery .list-gallery .item');
         if (slide.length > 0 && number_slide.length >= 5) {
@@ -263,8 +226,7 @@ var magnific_popup = {
     }
 }
 jQuery(document).ready(function () {
-    faq.init();
-    slider.init();
+    slide_feedback.init();
     actionClick.init();
     scrollFixed.init();
     scrollToTop.init();

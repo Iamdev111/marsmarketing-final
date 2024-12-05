@@ -60,7 +60,6 @@
         border-radius: 10px;
         position: relative;
         margin-bottom: 20px;
-        min-height: 85px;
 
         &.show {
             .title {
@@ -124,16 +123,84 @@
     .wrap {
         display: none;
     }
+
+    .list-cousres {
+        max-height: 400px;
+        overflow-y: scroll;
+        padding-left: 5px;
+        padding-right: 5px;
+        padding-top: 5px;
+    }
+
+    .course-wrap {
+        &:not(:last-child) {
+            margin-bottom: 50px;
+        }
+    }
+
+    .heading {
+        margin-bottom: 40px;
+    }
+
+    .heading-course {
+        font-family: "Barlow Condensed", sans-serif;
+        font-weight: 600;
+        padding-left: 5px;
+        font-size: 24px;
+        margin-bottom: 10px;
+        line-height: 1.3;
+        text-transform: uppercase;
+
+        span {
+            color: $brand;
+        }
+    }
+
+    .lecturer {
+        padding-left: 5px;
+        font-size: 18px;
+        margin-bottom: 10px;
+        font-weight: 600;
+        font-family: "Barlow Condensed", sans-serif;
+
+        span {
+            color: $brand;
+        }
+    }
+
+    ::-webkit-scrollbar {
+        width: 5px;
+        height: 5px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: #f0f0f0;
+        border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: #a50f15;
+        border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: #920d11;
+    }
+
 }
 
 .block-feedback {
-    background: #222 url(../images/bg-footer.png);
+    background: #8c1927 url(../images/bg-footer.png);
     background-repeat: repeat-x;
     padding: 50px 0 40px;
     margin-top: 60px;
 
     .heading {
         color: $light;
+
+        span {
+            color: #fffb57;
+        }
     }
 
     .sub-heading {
@@ -249,60 +316,6 @@
     }
 }
 
-.block-faq {
-    padding-top: 70px;
-    padding-bottom: 70px;
-    background: #f8f9fa;
-
-    .item-faq {
-        padding: 20px;
-        position: relative;
-        background: $light;
-        border-radius: 35px;
-
-        &.active {
-            box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
-
-            .extend {
-                &::after {
-                    content: "\f106";
-                }
-            }
-
-            .faq-name {
-                margin-bottom: 15px;
-            }
-        }
-
-        &:not(:last-child) {
-            margin-bottom: 20px;
-        }
-    }
-
-    .faq-name {
-        font-size: 20px;
-        font-weight: 600;
-        font-family: "Barlow Condensed", sans-serif;
-    }
-
-    .extend {
-        position: absolute;
-        right: 20px;
-        top: 20px;
-
-        &::after {
-            content: "\f107";
-            font-family: Font Awesome\ 5 Pro;
-            font-size: 20px;
-            cursor: pointer;
-        }
-    }
-
-    .faq-content {
-        display: none;
-    }
-}
-
 .block-expert {
     margin-top: 50px;
     padding-top: 60px;
@@ -311,7 +324,7 @@
     color: $light;
 
     .heading {
-        color: #ffd97c;
+        color: #fffb57;
     }
 
     .expert-title {
@@ -343,10 +356,6 @@
             font-weight: 700;
             margin-bottom: 15px;
         }
-
-        &-experience {
-            padding-left: 18px;
-        }
     }
 
     .list-image-experts {
@@ -368,7 +377,7 @@
     }
 
     .wrap-left {
-        background: $dark;
+        background: #8c1927;
         height: 100%;
         padding: 50px 50px 50px 70px;
         color: $light;
@@ -383,16 +392,6 @@
         a {
             color: $light;
         }
-    }
-
-    .slogan {
-        font-size: 24px;
-        font-weight: 700;
-        margin-bottom: 20px;
-    }
-
-    .sub-slogan {
-        margin-bottom: 15px;
     }
 
     .info {
@@ -509,6 +508,7 @@ label {
     display: flex;
     align-items: center;
     color: $light;
+    background-position-y: center;
 
     &::before {
         content: "";
@@ -616,192 +616,10 @@ label {
     }
 }
 
-.block-course {
-    margin-top: 60px;
-    margin-bottom: 120px;
-
-    &-left {
-        .course {
-            .thumbnail {
-                border-radius: 10px;
-                margin-bottom: 15px;
-            }
-
-            &-title {
-                font-size: 24px;
-                font-weight: 600;
-                font-family: Barlow Condensed, sans-serif;
-                margin-bottom: 0;
-            }
-
-            &-meta {
-                .meta {
-                    list-style: none;
-                    margin-bottom: 0;
-                    padding-left: 0;
-                    display: flex;
-                    justify-content: space-between;
-                }
-
-                .item {
-                    position: relative;
-                    padding-left: 25px;
-
-                    &::before {
-                        font-family: Font Awesome\ 5 Pro;
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                    }
-
-                    &:nth-child(1) {
-                        &::before {
-                            content: "\f5ff";
-                            color: #6400ff;
-                        }
-                    }
-
-                    &:nth-child(2) {
-                        &::before {
-                            content: "\f573";
-                            color: #ff0000;
-                        }
-                    }
-
-                    &:nth-child(3) {
-                        &::before {
-                            content: "\f017";
-                            color: #fb6f30;
-                        }
-                    }
-                }
-
-                .text {
-                    font-size: 14px;
-                    font-weight: 600;
-                }
-            }
-        }
-    }
-
-    .price-review {
-        margin-top: 15px;
-        margin-bottom: 15px;
-        padding-bottom: 15px;
-        display: flex;
-        justify-content: space-between;
-        border-bottom: 1px solid $border;
-    }
-
-    .review {
-        display: flex;
-        align-items: center;
-
-        &-star {
-            list-style: none;
-            padding-left: 0;
-            margin-bottom: 0;
-            margin-right: 15px;
-
-            li {
-                display: inline-block;
-                color: #fb6f30;
-            }
-        }
-
-        .number {
-            font-size: 14px;
-            font-weight: 500;
-            color: #80868b;
-        }
-    }
-
-    .price {
-        font-size: 22px;
-        font-weight: 600;
-        color: #d0021c;
-        font-family: Barlow Condensed, sans-serif;
-    }
-
-    .heading {
-        margin-bottom: 30px;
-    }
-
-    .course-info {
-        i {
-            color: $brand;
-            width: 20px;
-            margin-right: 5px;
-            text-align: center;
-        }
-
-        span {
-            font-size: 17px;
-            font-weight: 600;
-            font-family: "Barlow Condensed", sans-serif;
-        }
-
-        p {
-            margin-bottom: 0px;
-            padding: 8px 0;
-        }
-
-        .content {
-            p {
-                background: transparent;
-            }
-        }
-    }
-
-    &-right {
-        .title {
-            font-size: 22px;
-            font-weight: 700;
-            font-family: "Barlow Condensed", sans-serif;
-            text-transform: uppercase;
-            margin-bottom: 15px;
-        }
-    }
-
-    .tuition {
-        &-title {
-            margin-bottom: 10px;
-        }
-    }
-
-    .content-title {
-        font-weight: 600;
-        font-family: "Barlow Condensed", sans-serif;
-        font-size: 17px;
-        margin-bottom: 10px;
-        position: relative;
-
-        &::after {
-            content: "";
-            width: 82px;
-            height: 1px;
-            background: $brand;
-            position: absolute;
-            left: 0;
-            bottom: -3px;
-        }
-    }
-
-    .content {
-        p {
-            padding: 0;
-            margin-bottom: 10px;
-        }
-    }
-
-    .slick-dots {
-        bottom: -45px;
-    }
-}
-
 .block-schedule {
-    background: #faf6f1;
-    padding: 50px 0;
+    background: #f8f8f8;
+    padding: 60px 0;
+    margin-top: 50px;
 
     &-container {
         background: $light;
@@ -818,8 +636,6 @@ label {
 
         th {
             padding: 10px 12px;
-            font-weight: normal;
-            color: #80868b;
 
             &:not(:last-child) {
                 border-right: 1px solid $border;
@@ -835,9 +651,33 @@ label {
         }
     }
 
+    .readmore {
+        padding: 6px 25px;
+        border: 1px solid #ecaf23;
+        color: #ecaf23;
+        border-radius: 20px;
+        font-weight: 600;
+        display: inline-block;
+        font-family: "Barlow Condensed", sans-serif;
+        margin-right: 10px;
+        line-height: 1.3;
+
+        &:hover {
+            background: #ecaf23;
+            color: $light;
+        }
+    }
+
     .schedule-body {
         td {
-            padding: 8px 12px;
+            padding: 10px 12px;
+            border-right: 1px solid #e3e3e3;
+            border-bottom: 1px solid #e3e3e3;
+
+            &:first-child {
+                border-left: 1px solid #e3e3e3;
+                font-weight: 700;
+            }
         }
 
         .item {
@@ -856,7 +696,6 @@ label {
 
     .btn-signin {
         padding: 6px 25px;
-        font-size: 16px;
         border-radius: 20px;
     }
 
@@ -878,18 +717,23 @@ label {
         }
     }
 
+    @keyframes text-gradient {
+        100% {
+            background-position: 200%;
+        }
+    }
+
     .title {
-        font-size: 18px;
+        font-size: 20px;
         text-transform: uppercase;
         font-weight: 700;
         text-align: center;
-        margin-bottom: 5px;
-        color: #ffd97c;
-    }
-
-    .s-title {
-        text-transform: uppercase;
-        text-align: center;
+        background-image: linear-gradient(-225deg, #ffffff, #ffd700 29%, #00ffff 67%, #ffffff);
+        background-size: 200% auto;
+        color: #fff;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: text-gradient 2s linear infinite;
     }
 
     .meta {
@@ -924,7 +768,6 @@ label {
 
     .costs-price {
         font-weight: 700;
-        text-transform: uppercase;
         text-align: center;
         margin-bottom: 10px;
         font-size: 18px;
